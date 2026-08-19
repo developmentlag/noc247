@@ -1,4 +1,17 @@
 (function(){
+  function ensureAnalytics() {
+    try {
+      if (!document.querySelector('script[src*="/_vercel/insights/script.js"]')) {
+        var vaScript = document.createElement('script');
+        vaScript.src = '/_vercel/insights/script.js';
+        vaScript.defer = true;
+        document.head.appendChild(vaScript);
+      }
+    } catch (e) {
+      console.error('analytics-inject error', e);
+    }
+  }
+
   function ensureCalculator() {
     try {
       // Desktop nav
@@ -82,8 +95,8 @@
   }
 
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', function(){ ensureCalculator(); attachHandlers(); createModal(); });
-  } else { ensureCalculator(); attachHandlers(); createModal(); }
+    document.addEventListener('DOMContentLoaded', function(){ ensureAnalytics(); ensureCalculator(); attachHandlers(); createModal(); });
+  } else { ensureAnalytics(); ensureCalculator(); attachHandlers(); createModal(); }
 
   // Re-run when DOM mutates (e.g., React re-render)
   var mo = new MutationObserver(function(){ ensureCalculator(); });
