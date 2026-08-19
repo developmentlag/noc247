@@ -15,3 +15,4 @@ Notes:
 - All CSS, fonts and JS are served from `public/assets` and other files under `public/` without modification.
 - If any route is missing, add an `index.html` under the respective path in `public/` or adjust rewrites in next.config.js.
 # noc247
+# noc247
