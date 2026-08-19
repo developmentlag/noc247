@@ -251,7 +251,7 @@ export async function getServerSideProps({ params, res }) {
     if (res) {
       res.setHeader(
         'Cache-Control',
-        'public, s-maxage=5, stale-while-revalidate=59'
+        'public, s-maxage=300, stale-while-revalidate=59'
       );
     }
     const blog = await fetchBlogBySlug(slug);
