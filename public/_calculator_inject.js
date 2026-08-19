@@ -7,6 +7,12 @@
         vaScript.defer = true;
         document.head.appendChild(vaScript);
       }
+      if (!document.querySelector('script[src*="/_vercel/speed-insights/script.js"]')) {
+        var siScript = document.createElement('script');
+        siScript.src = '/_vercel/speed-insights/script.js';
+        siScript.defer = true;
+        document.head.appendChild(siScript);
+      }
     } catch (e) {
       console.error('analytics-inject error', e);
     }
