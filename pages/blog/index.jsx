@@ -199,22 +199,26 @@ export default function BlogIndexPage({ blogs = [] }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps({ res }) {
   try {
+    if (res) {
+      res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=5, stale-while-revalidate=59'
+      );
+    }
     const blogs = await fetchAllBlogs();
     return {
       props: {
         blogs,
       },
-      revalidate: 60,
     };
   } catch (error) {
-    console.error('[Blog Index] Error in getStaticProps:', error);
+    console.error('[Blog Index] Error in getServerSideProps:', error);
     return {
       props: {
         blogs: [],
       },
-      revalidate: 30,
     };
   }
 }

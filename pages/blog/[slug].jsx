@@ -244,36 +244,21 @@ export default function BlogPostPage({ blog }) {
   );
 }
 
-export async function getStaticPaths() {
-  try {
-    const blogs = await fetchAllBlogs();
-    const paths = blogs.map((b) => ({
-      params: { slug: b.slug },
-    }));
-
-    return {
-      paths,
-      fallback: 'blocking', // Allows new GitHub repos to be discovered and rendered on-demand
-    };
-  } catch (error) {
-    console.error('[BlogPost] Error in getStaticPaths:', error);
-    return {
-      paths: [],
-      fallback: 'blocking',
-    };
-  }
-}
-
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params, res }) {
   const { slug } = params;
 
   try {
+    if (res) {
+      res.setHeader(
+        'Cache-Control',
+        'public, s-maxage=5, stale-while-revalidate=59'
+      );
+    }
     const blog = await fetchBlogBySlug(slug);
 
     if (!blog) {
       return {
         notFound: true,
-        revalidate: 30, // Try again in 30 seconds if author just pushed repo
       };
     }
 
@@ -281,13 +266,11 @@ export async function getStaticProps({ params }) {
       props: {
         blog,
       },
-      revalidate: 60, // Incremental Static Regeneration every 60s
     };
   } catch (error) {
     console.error(`[BlogPost] Error fetching blog "${slug}":`, error);
     return {
       notFound: true,
-      revalidate: 30,
     };
   }
 }
