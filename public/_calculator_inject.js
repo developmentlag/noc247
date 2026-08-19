@@ -97,7 +97,24 @@
   }
 
   function attachHandlers() {
-    // allow direct navigation to /calculator
+    // Force full page navigation for /blog and /blog/* to ensure Next.js SSR executes
+    document.addEventListener('click', function(e) {
+      var target = e.target;
+      while (target && target !== document.body) {
+        if (target.tagName === 'A' && target.getAttribute('href')) {
+          var href = target.getAttribute('href');
+          if (href === '/blog' || href.startsWith('/blog/')) {
+            if (!e.defaultPrevented && !e.metaKey && !e.ctrlKey && !e.shiftKey && e.button === 0) {
+              e.preventDefault();
+              e.stopPropagation();
+              window.location.href = href;
+              return;
+            }
+          }
+        }
+        target = target.parentElement;
+      }
+    }, true);
   }
 
   if (document.readyState === 'loading') {
