@@ -29,9 +29,25 @@ export default function MarkdownRenderer({ content, rawHtml }) {
           h3: ({ node, ...props }) => (
             <h3 className="mt-8 mb-3 font-sans text-xl font-bold tracking-tight text-neutral-950 md:text-2xl" {...props} />
           ),
-          p: ({ node, ...props }) => (
-            <p className="mb-6 text-[1.0625rem] leading-8 text-neutral-700" {...props} />
-          ),
+          p: ({ node, children, ...props }) => {
+            // If paragraph contains an image element, render as div to avoid invalid <figure>/<div> in <p> DOM nesting
+            const hasImg =
+              node &&
+              node.children &&
+              node.children.some(
+                (child) =>
+                  child.tagName === 'img' ||
+                  (child.type === 'element' && child.tagName === 'img')
+              );
+            if (hasImg) {
+              return <div className="my-6">{children}</div>;
+            }
+            return (
+              <p className="mb-6 text-[1.0625rem] leading-8 text-neutral-700" {...props}>
+                {children}
+              </p>
+            );
+          },
           ul: ({ node, ...props }) => (
             <ul className="mb-6 list-disc space-y-2 pl-6 text-neutral-700 leading-8" {...props} />
           ),
@@ -95,21 +111,21 @@ export default function MarkdownRenderer({ content, rawHtml }) {
             <hr className="my-10 border-t border-neutral-200" {...props} />
           ),
           img: ({ node, src, alt, ...props }) => (
-            <figure className="my-8">
+            <span className="block my-6 text-center">
               <img
                 src={src}
                 alt={alt || 'Article visual'}
                 loading="lazy"
                 decoding="async"
-                className="mx-auto rounded-2xl border border-neutral-200 shadow-sm max-h-[500px] w-auto object-contain"
+                className="mx-auto rounded-2xl border border-neutral-200 shadow-sm max-h-[520px] w-auto object-contain inline-block"
                 {...props}
               />
               {alt && (
-                <figcaption className="mt-2 text-center text-xs text-neutral-500">
+                <span className="mt-2 block text-center text-xs text-neutral-500">
                   {alt}
-                </figcaption>
+                </span>
               )}
-            </figure>
+            </span>
           ),
         }}
       >
