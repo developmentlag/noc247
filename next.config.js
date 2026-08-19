@@ -7,6 +7,8 @@ function collectIndexHtmlFiles(dir) {
   for (const entry of entries) {
     const full = path.join(dir, entry.name);
     if (entry.isDirectory()) {
+      // Exclude blog directory so dynamic Next.js pages handle /blog and /blog/[slug]
+      if (entry.name === 'blog') continue;
       results.push(...collectIndexHtmlFiles(full));
     } else if (entry.isFile() && entry.name.toLowerCase() === 'index.html') {
       results.push(full);
@@ -24,7 +26,7 @@ module.exports = {
     const rewrites = [];
     for (const file of files) {
       const rel = path.relative(publicDir, file).replace(/\\/g, '/');
-      // rel is like "index.html" or "about/index.html" or "blog/post/index.html"
+      // rel is like "index.html" or "about/index.html"
       if (rel === 'index.html') {
         rewrites.push({ source: '/', destination: '/index.html' });
       } else {
@@ -41,6 +43,9 @@ module.exports = {
     rewrites.push({ source: '/calculator/', destination: '/calculator/index.html' });
     rewrites.push({ source: '/noc247-calculator', destination: '/calculator/index.html' });
     rewrites.push({ source: '/noc247-calculator/', destination: '/calculator/index.html' });
+
+    // dynamic sitemap
+    rewrites.push({ source: '/sitemap.xml', destination: '/api/sitemap' });
 
     return rewrites;
   }
