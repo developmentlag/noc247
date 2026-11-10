@@ -247,6 +247,15 @@ export default function BlogPostPage({ blog }) {
 export async function getServerSideProps({ params, res }) {
   const { slug } = params;
 
+  if (slug === '[slug]') {
+    return {
+      redirect: {
+        destination: '/blog',
+        permanent: true,
+      },
+    };
+  }
+
   try {
     if (res) {
       res.setHeader(

@@ -28,18 +28,28 @@ module.exports = {
         permanent: true,
       },
       {
-        source: '/blog/what-is-a-noc',
-        destination: '/blog/What-is-a-NOC-and-does-your-MSP-actually-need-one-',
+        source: '/blog/What-a-24-7-NOC-really-costs-to-run-in-house',
+        destination: '/blog/cost-to-build-24x7-noc',
         permanent: true,
       },
       {
-        source: '/blog/l1-l2-l3-it-support',
-        destination: '/blog/L1-L2-and-L3-IT-support-what-the-tiers-actually-mean',
+        source: '/blog/How-to-cut-RMM-alert-noise-without-missing-the-one-that-matters',
+        destination: '/blog/reduce-rmm-alert-noise',
         permanent: true,
       },
       {
-        source: '/blog/reduce-rmm-alert-noise',
-        destination: '/blog/How-to-cut-RMM-alert-noise-without-missing-the-one-that-matters',
+        source: '/blog/L1-L2-and-L3-IT-support-what-the-tiers-actually-mean',
+        destination: '/blog/l1-l2-l3-it-support',
+        permanent: true,
+      },
+      {
+        source: '/blog/What-is-a-NOC-and-does-your-MSP-actually-need-one-',
+        destination: '/blog/what-is-a-noc',
+        permanent: true,
+      },
+      {
+        source: '/blog/How-to-set-up-a-NOC-in-house-the-honest-roadmap',
+        destination: '/blog/how-to-set-up-a-noc',
         permanent: true,
       },
     ];
