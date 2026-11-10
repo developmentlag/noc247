@@ -10,22 +10,22 @@ export default function BlogIndexPage({ blogs = [] }) {
   const pageTitle = 'NOC & MSP Operations Insights | NOC247';
   const pageDescription =
     'Practical writing on NOC operations for MSPs — alert tuning, support tiers, RMM platforms, and the economics of outsourcing overnight coverage.';
-  const canonicalUrl = 'https://noc247.io/blog';
+  const canonicalUrl = 'https://www.noc247.io/blog';
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Blog',
-    '@id': 'https://noc247.io/blog#blog',
+    '@id': 'https://www.noc247.io/blog#blog',
     name: 'NOC247 — NOC & MSP operations insights',
     description: pageDescription,
     url: canonicalUrl,
     publisher: {
       '@type': 'Organization',
       name: 'NOC247',
-      url: 'https://noc247.io',
+      url: 'https://www.noc247.io',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://noc247.io/logo.png',
+        url: 'https://www.noc247.io/logo.png',
       },
     },
     blogPost: blogs.map((b) => ({
@@ -34,7 +34,7 @@ export default function BlogIndexPage({ blogs = [] }) {
       description: b.description,
       datePublished: b.datePublished,
       dateModified: b.dateModified || b.datePublished,
-      url: `https://noc247.io/blog/${b.slug}`,
+      url: `https://www.noc247.io/blog/${b.slug}`,
       author: {
         '@type': 'Organization',
         name: b.author || 'NOC247',
@@ -55,7 +55,7 @@ export default function BlogIndexPage({ blogs = [] }) {
         <meta property="og:title" content={pageTitle} />
         <meta property="og:description" content={pageDescription} />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content="https://noc247.io/og-default.png" />
+        <meta property="og:image" content="https://www.noc247.io/og-default.png" />
         <meta property="og:site_name" content="NOC247" />
         <meta property="og:locale" content="en_US" />
 
@@ -63,7 +63,7 @@ export default function BlogIndexPage({ blogs = [] }) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={pageTitle} />
         <meta name="twitter:description" content={pageDescription} />
-        <meta name="twitter:image" content="https://noc247.io/og-default.png" />
+        <meta name="twitter:image" content="https://www.noc247.io/og-default.png" />
 
         {/* JSON-LD */}
         <script

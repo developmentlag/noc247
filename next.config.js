@@ -19,6 +19,31 @@ function collectIndexHtmlFiles(dir) {
 
 module.exports = {
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: '/:path*',
+        has: [{ type: 'host', value: 'noc247.io' }],
+        destination: 'https://www.noc247.io/:path*',
+        permanent: true,
+      },
+      {
+        source: '/blog/what-is-a-noc',
+        destination: '/blog/What-is-a-NOC-and-does-your-MSP-actually-need-one-',
+        permanent: true,
+      },
+      {
+        source: '/blog/l1-l2-l3-it-support',
+        destination: '/blog/L1-L2-and-L3-IT-support-what-the-tiers-actually-mean',
+        permanent: true,
+      },
+      {
+        source: '/blog/reduce-rmm-alert-noise',
+        destination: '/blog/How-to-cut-RMM-alert-noise-without-missing-the-one-that-matters',
+        permanent: true,
+      },
+    ];
+  },
   async rewrites() {
     const publicDir = path.join(__dirname, 'public');
     if (!fs.existsSync(publicDir)) return [];
@@ -44,9 +69,9 @@ module.exports = {
     rewrites.push({ source: '/noc247-calculator', destination: '/calculator/index.html' });
     rewrites.push({ source: '/noc247-calculator/', destination: '/calculator/index.html' });
 
-    // dynamic sitemap
-    rewrites.push({ source: '/sitemap.xml', destination: '/api/sitemap' });
-
-    return rewrites;
+    return {
+      beforeFiles: [{ source: '/sitemap.xml', destination: '/api/sitemap' }],
+      afterFiles: rewrites,
+    };
   }
 };

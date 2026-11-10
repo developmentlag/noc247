@@ -24,7 +24,7 @@ export async function generateSitemapXml() {
 
   // 1. Static Pages
   for (const page of STATIC_ROUTES) {
-    const loc = page.path ? `https://noc247.io/${page.path}` : 'https://noc247.io/';
+    const loc = page.path ? `https://www.noc247.io/${page.path}` : 'https://www.noc247.io/';
     xml += '  <url>\n';
     xml += `    <loc>${loc}</loc>\n`;
     xml += `    <lastmod>${today}</lastmod>\n`;
@@ -34,7 +34,7 @@ export async function generateSitemapXml() {
 
   // 2. Dynamic Blog Pages
   for (const blog of blogs) {
-    const loc = `https://noc247.io/blog/${blog.slug}`;
+    const loc = `https://www.noc247.io/blog/${blog.slug}`;
     const lastmod = blog.dateModified || blog.datePublished || today;
     xml += '  <url>\n';
     xml += `    <loc>${loc}</loc>\n`;

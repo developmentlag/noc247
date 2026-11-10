@@ -25,9 +25,9 @@ export default function BlogPostPage({ blog }) {
     readingTime,
   } = blog;
 
-  const canonicalUrl = `https://noc247.io/blog/${slug}`;
+  const canonicalUrl = `https://www.noc247.io/blog/${slug}`;
   const pageTitle = `${title} | NOC247`;
-  const heroImage = image || 'https://noc247.io/og-default.png';
+  const heroImage = image || 'https://www.noc247.io/og-default.png';
 
   // Article and Breadcrumb JSON-LD Structured Data
   const jsonLd = {
@@ -43,15 +43,15 @@ export default function BlogPostPage({ blog }) {
         author: {
           '@type': 'Organization',
           name: author || 'NOC247',
-          url: 'https://noc247.io',
+          url: 'https://www.noc247.io',
         },
         publisher: {
           '@type': 'Organization',
           name: 'NOC247',
-          url: 'https://noc247.io',
+          url: 'https://www.noc247.io',
           logo: {
             '@type': 'ImageObject',
-            url: 'https://noc247.io/logo.png',
+            url: 'https://www.noc247.io/logo.png',
           },
         },
         mainEntityOfPage: canonicalUrl,
@@ -68,13 +68,13 @@ export default function BlogPostPage({ blog }) {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://noc247.io',
+            item: 'https://www.noc247.io',
           },
           {
             '@type': 'ListItem',
             position: 2,
             name: 'Insights',
-            item: 'https://noc247.io/blog',
+            item: 'https://www.noc247.io/blog',
           },
           {
             '@type': 'ListItem',
