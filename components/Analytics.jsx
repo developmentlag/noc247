@@ -26,7 +26,7 @@ export default function Analytics() {
       if (!anchor) return;
       const href = anchor.getAttribute('href') || '';
       const label = (anchor.textContent || '').replace(/\s+/g, ' ').trim();
-      if (isCalendlyHref(href) || label === 'Book a scoping call' || label === 'Book the audit call') {
+      if (isCalendlyHref(href) || /book a 30-minute/i.test(label)) {
         trackCalendlyClick(isCalendlyHref(href) ? href : CALENDLY_URL);
       }
     };

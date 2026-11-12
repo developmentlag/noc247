@@ -36,7 +36,7 @@ export default function CostEstimator() {
             onChange={(event) => setEndpoints(event.target.value)}
             required
             maxLength={40}
-            placeholder="For example, 800"
+            aria-label="Endpoints under management"
           />
         </label>
         <fieldset>
@@ -63,7 +63,7 @@ export default function CostEstimator() {
           </p>
           {result.overnight === 'no' ? (
             <p className="mt-3 text-sm leading-7 text-brand-700">
-              With no overnight staff, the published comparison is a three-shift in-house desk: {PUBLISHED_DESK} (homepage FAQ). A single L1 analyst is published at {PUBLISHED_HEAD} (outsourced NOC page). A 24/7 rota is a team, not one salary. [placeholder] headcount beyond those published lines is not filled in here.
+              With no overnight staff, the published comparison is a three-shift in-house desk: {PUBLISHED_DESK} (homepage FAQ). A single L1 analyst is published at {PUBLISHED_HEAD} (outsourced NOC page). A 24/7 rota is a team, not one salary.
             </p>
           ) : (
             <p className="mt-3 text-sm leading-7 text-brand-700">

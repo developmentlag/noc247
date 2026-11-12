@@ -59,7 +59,12 @@ module.exports = {
       },
       {
         source: '/testimonials',
-        destination: '/case-studies',
+        destination: '/managed-noc-services-for-msps',
+        permanent: true,
+      },
+      {
+        source: '/case-studies',
+        destination: '/managed-noc-services-for-msps',
         permanent: true,
       },
       {

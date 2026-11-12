@@ -21,7 +21,6 @@ const STATIC_ROUTES = [
   { path: 'connectwise-noc', priority: '0.7', changefreq: 'monthly' },
   { path: 'kaseya-noc', priority: '0.7', changefreq: 'monthly' },
   { path: 'noc-vs-in-house', priority: '0.7', changefreq: 'monthly' },
-  { path: 'case-studies', priority: '0.5', changefreq: 'monthly' },
 ];
 
 export async function generateSitemapXml() {

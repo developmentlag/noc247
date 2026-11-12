@@ -191,11 +191,6 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/case-studies" className="inline-flex items-center gap-1.5 py-1.5 text-brand-700 transition hover:text-accent-600">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-300"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>Case studies
-                </Link>
-              </li>
-              <li>
                 <Link href="/pricing" className="inline-flex items-center gap-1.5 py-1.5 text-brand-700 transition hover:text-accent-600">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-300"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>Pricing &amp; Packages
                 </Link>

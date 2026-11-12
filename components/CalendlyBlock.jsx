@@ -1,12 +1,12 @@
 import { CALENDLY_URL } from '../lib/analytics';
 
 export default function CalendlyBlock({
-  heading = 'Book a scoping call',
-  body = 'Pick a time on the live calendar. [TODO: call length — 15 or 30 minutes. The button still opens the existing 30-minute Calendly event.]',
-  buttonLabel = 'Book a scoping call',
+  heading = 'Book a 30-minute scoping call',
+  body = 'Pick a 30-minute slot on the live calendar.',
+  buttonLabel = 'Book a 30-minute scoping call',
 }) {
   return (
-    <section aria-label="Book a scoping call" className="bg-brand-50/40 py-16 md:py-20">
+    <section aria-label="Book a 30-minute scoping call" className="bg-brand-50/40 py-16 md:py-20">
       <div className="container mx-auto px-4 md:px-8">
         <div className="mx-auto max-w-3xl">
           <h2 className="font-display text-3xl font-semibold tracking-tight text-brand-700">{heading}</h2>
@@ -16,7 +16,7 @@ export default function CalendlyBlock({
           </a>
           <div className="mt-8 overflow-hidden rounded-2xl border border-brand-100 bg-white">
             <iframe
-              title="Book a scoping call"
+              title="Book a 30-minute scoping call"
               src={CALENDLY_URL}
               className="h-[720px] w-full"
             />

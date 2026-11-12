@@ -164,7 +164,7 @@ export default function BlogIndexPage({ blogs = [] }) {
                       <rect width="18" height="18" x="3" y="4" rx="2" />
                       <path d="M3 10h18" />
                     </svg>
-                    Book a scoping call
+                    Book a 30-minute scoping call
                   </a>
                   <Link
                     href="/contact"

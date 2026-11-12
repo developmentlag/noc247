@@ -1,6 +1,6 @@
 import { CALENDLY_URL } from '../lib/analytics';
 
-export default function StickyBook({ label = 'Book a scoping call' }) {
+export default function StickyBook({ label = 'Book a 30-minute scoping call' }) {
   return (
     <a
       href={CALENDLY_URL}

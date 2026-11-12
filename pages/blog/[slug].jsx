@@ -218,7 +218,7 @@ export default function BlogPostPage({ blog }) {
                     Looking for 24×7 NOC coverage for your MSP?
                   </h3>
                   <p className="mt-2 text-sm text-brand-600 leading-relaxed">
-                    NOC247 monitors, triages, and resolves alerts inside your RMM around the clock under your brand. Book a scoping call to get started.
+                    NOC247 monitors, triages, and resolves alerts inside your RMM around the clock under your brand. Book a 30-minute scoping call to get started.
                   </p>
                   <p className="mt-3 text-sm leading-7 text-brand-600">
                     The full service is{' '}
@@ -264,7 +264,7 @@ export default function BlogPostPage({ blog }) {
                       rel="noreferrer noopener"
                       className="btn-accent text-sm"
                     >
-                      Book a scoping call
+                      Book a 30-minute scoping call
                     </a>
                     <Link href="/contact" className="btn-secondary text-sm">
                       Contact us

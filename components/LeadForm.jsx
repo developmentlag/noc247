@@ -93,11 +93,11 @@ export default function LeadForm({
       </label>
       <label className="text-sm font-medium text-brand-700">
         RMM
-        <input className={inputClass} name="rmm" value={fields.rmm} onChange={onChange} required maxLength={100} placeholder="NinjaOne, N-able, Auvik…" />
+        <input className={inputClass} name="rmm" value={fields.rmm} onChange={onChange} required maxLength={100} />
       </label>
       <label className="text-sm font-medium text-brand-700">
         Endpoint mix
-        <input className={inputClass} name="endpoints" value={fields.endpoints} onChange={onChange} required maxLength={100} placeholder="Approximate endpoints, or a mix" />
+        <input className={inputClass} name="endpoints" value={fields.endpoints} onChange={onChange} required maxLength={100} />
       </label>
       {howSharedLabel ? (
         <label className="text-sm font-medium text-brand-700">

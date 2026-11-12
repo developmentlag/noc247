@@ -4,8 +4,8 @@ import PageMeta, { faqJsonLd, webPageJsonLd } from './PageMeta';
 import FaqList from './FaqList';
 import CalendlyBlock from './CalendlyBlock';
 
-const ONBOARDING_TODO =
-  '[TODO: onboarding window — confirm 2–6 days or 7–10 business days before publishing a number.] The sequence already described on the site is tool access, runbook mapping, monitor ingestion, shadow shifts, then go-live.';
+const ONBOARDING =
+  'Most MSPs are live in 7–10 business days. The sequence is tool access, runbook mapping, monitor ingestion, shadow shifts, then go-live.';
 
 export default function ToolPage({
   path,
@@ -57,13 +57,12 @@ export default function ToolPage({
             ) : null}
             <article>
               <h2 className="font-display text-2xl text-brand-700">Onboarding</h2>
-              <p className="mt-3 leading-7 text-brand-600">{ONBOARDING_TODO}</p>
+              <p className="mt-3 leading-7 text-brand-600">{ONBOARDING}</p>
             </article>
             <p className="text-sm leading-7 text-brand-600">
               Back to the <Link href="/rmm-integrations" className="link-underline">RMM integrations hub</Link>, the{' '}
               <Link href="/managed-noc-services-for-msps" className="link-underline">managed NOC services for MSPs</Link>, and the{' '}
               <Link href="/free-alert-audit" className="link-underline">free after-hours alert audit</Link>.
-              No partner badge is shown here unless it is a real certification on file.
             </p>
           </div>
         </div>

@@ -7,7 +7,7 @@ import CostEstimator from '../components/CostEstimator';
 
 const title = 'In-house NOC cost vs a white-label team | NOC247';
 const description =
-  'Compare a published three-shift in-house NOC cost with a white-label team. Figures are estimates from this site, not a rate card. Book a scoping call.';
+  'Compare a published three-shift in-house NOC cost with a white-label team. Figures are estimates from this site, not a rate card. Book a 30-minute scoping call.';
 const path = '/calculator';
 
 const faqs = [
@@ -65,7 +65,7 @@ export default function CalculatorPage() {
               </p>
               <h2>What this model will not do</h2>
               <p>
-                It will not say a typical MSP saves a percentage. It will not invent a per-endpoint NOC247 rate. [TODO: onboarding window — 2–6 days or 7–10 business days — is not part of the cost output.]
+                It will not say a typical MSP saves a percentage. It will not invent a per-endpoint NOC247 rate. Onboarding is 7–10 business days and is separate from this cost model.
               </p>
               <h2>What stays with the MSP</h2>
               <p>
@@ -78,7 +78,7 @@ export default function CalculatorPage() {
         </div>
       </section>
       <FaqList items={faqs} heading="Calculator questions" />
-      <CalendlyBlock heading="Book a scoping call after the estimate" />
+      <CalendlyBlock heading="Book a 30-minute scoping call after the estimate" />
     </MarketingShell>
   );
 }

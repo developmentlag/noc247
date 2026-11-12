@@ -7,19 +7,19 @@ import LeadForm from '../components/LeadForm';
 
 const title = 'Free After-Hours Alert Audit for MSPs | NOC247';
 const description =
-  "Send one week of after-hours alerts. We'll show how many overnight pages needed a human — inside NinjaOne, N-able or Auvik. Book a scoping call.";
+  "Send one week of after-hours alerts. We'll show how many overnight pages needed a human — inside NinjaOne, N-able or Auvik. Book a 30-minute scoping call.";
 const path = '/free-alert-audit';
 
 const faqs = [
   {
     question: 'What should I send?',
     answer:
-      'One week of after-hours alerts, the RMM you use, and a rough endpoint mix. Do not include client names or other client PII. [TODO: Mihir — privacy and NDA wording for how exports are stored and who sees them.]',
+      'One week of after-hours alerts, the RMM you use, and a rough endpoint mix. Leave out client names and other client personal data. We only use the export to prepare your audit. We do not share it, and we delete it on request. An NDA is available on request.',
   },
   {
     question: 'What comes back?',
     answer:
-      'Counts and a few examples of alerts that needed a person versus alerts that did not. [placeholder] sample percentages are not published until a real, approved audit is available to quote.',
+      'A read of that week: which overnight pages needed a person, and which did not, with examples from your export.',
   },
   {
     question: 'Which tools?',
@@ -27,9 +27,9 @@ const faqs = [
       'NinjaOne, N-able N-central, N-sight, and Auvik, plus ConnectWise, Datto, Kaseya, and Atera when that is the stack the export comes from.',
   },
   {
-    question: 'How long does it take?',
+    question: 'How do we talk it through?',
     answer:
-      '[TODO: audit turnaround — not confirmed.] Book the audit call if you want a time on the calendar while that window is still open.',
+      'Book a 30-minute scoping call. That is the same calendar used for every NOC247 scoping call.',
   },
 ];
 
@@ -49,8 +49,8 @@ export default function FreeAlertAuditPage() {
             <h1 className="mt-4 font-display text-4xl font-semibold tracking-tight text-brand-700 md:text-5xl">
               See how many overnight pages actually needed a human
             </h1>
-            <p className="mt-6 text-lg leading-8 text-brand-600">
-              Send one week of after-hours alerts from your RMM. The audit separates pages that needed a person from noise. It is not a penetration test, not a full NOC engagement, and not a published case study.
+              <p className="mt-6 text-lg leading-8 text-brand-600">
+              Send one week of after-hours alerts from your RMM. The audit separates pages that needed a person from noise.
             </p>
           </div>
         </div>
@@ -62,19 +62,19 @@ export default function FreeAlertAuditPage() {
             <article>
               <h2 className="font-display text-2xl text-brand-700">What the audit is and is not</h2>
               <p className="mt-3 leading-7">
-                It is a read of one week of after-hours alerts. It is not a promise of a specific reduction, and it does not name your clients. [placeholder] outcome metrics stay blank until Mihir approves a real sample.
+                It is a read of one week of after-hours alerts from your RMM. You get counts and examples from that export.
               </p>
             </article>
             <article>
               <h2 className="font-display text-2xl text-brand-700">What to send</h2>
               <p className="mt-3 leading-7">
-                One week of alerts, the RMM type, and no client PII. Say how you will share the export (a redacted file, a screen share, or access that expires). [TODO: Mihir — privacy / NDA wording.]
+                One week of alerts and the RMM type. Leave out client names and other client personal data. We only use the export to prepare your audit. We do not share it, and we delete it on request. An NDA is available on request.
               </p>
             </article>
             <article>
               <h2 className="font-display text-2xl text-brand-700">What comes back</h2>
               <p className="mt-3 leading-7">
-                Counts, and examples of alerts that needed a human. [placeholder] — no “40% reduction” line, and no client name, until a consented example exists.
+                Counts, and examples of alerts that needed a human, taken from the week you send.
               </p>
             </article>
             <article>
@@ -89,9 +89,9 @@ export default function FreeAlertAuditPage() {
               </p>
             </article>
             <article>
-              <h2 className="font-display text-2xl text-brand-700">Timeline</h2>
+              <h2 className="font-display text-2xl text-brand-700">The call</h2>
               <p className="mt-3 leading-7">
-                [TODO: audit timeline.] The scoping call itself is still the existing calendar link. [TODO: call length — 15 or 30 minutes.]
+                The review is a 30-minute scoping call on the calendar below.
               </p>
             </article>
           </div>
@@ -103,7 +103,7 @@ export default function FreeAlertAuditPage() {
           <div className="mx-auto max-w-3xl">
             <h2 className="font-display text-3xl font-semibold text-brand-700">Request the audit</h2>
             <p className="mt-3 text-sm leading-7 text-brand-600">
-              [TODO: replace this form with the approved Tally embed once the form ID exists.] Until then this form posts to the same inquiry inbox as the contact page and records a lead only after a successful send.
+              Tell us how you will share the export. We only use these details to prepare your audit and reply to you.
             </p>
             <div className="mt-6">
               <LeadForm
@@ -119,7 +119,7 @@ export default function FreeAlertAuditPage() {
       </section>
 
       <FaqList items={faqs} />
-      <CalendlyBlock heading="Book the audit call" buttonLabel="Book the audit call" />
+      <CalendlyBlock heading="Book a 30-minute scoping call" buttonLabel="Book a 30-minute scoping call" />
     </MarketingShell>
   );
 }

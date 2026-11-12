@@ -6,7 +6,7 @@ import CalendlyBlock from '../components/CalendlyBlock';
 
 const title = 'NOC247 vs an in-house NOC | Cost and coverage | NOC247';
 const description =
-  'Compare a three-shift in-house NOC with white-label 24/7 coverage inside your RMM. Use the cost calculator, then book a scoping call.';
+  'Compare a three-shift in-house NOC with white-label 24/7 coverage inside your RMM. Use the cost calculator, then book a 30-minute scoping call.';
 const path = '/noc-vs-in-house';
 
 const faqs = [
@@ -54,7 +54,7 @@ export default function NocVsInHousePage() {
             <p>
               Read <Link href="/blog/cost-to-build-24x7-noc">what a 24/7 NOC really costs to run in-house</Link> and{' '}
               <Link href="/blog/how-to-set-up-a-noc">how to set up a NOC in-house</Link> beside this page. Use the{' '}
-              <Link href="/calculator">cost calculator</Link> to frame your own endpoint count. Do not expect a new percentage on this URL.
+              <Link href="/calculator">cost calculator</Link> to frame your own endpoint count. The figures are the ranges already published on this site.
             </p>
             <h2>What stays with the MSP</h2>
             <p>
@@ -63,7 +63,7 @@ export default function NocVsInHousePage() {
               Branding is <Link href="/white-label-noc-services">white-label NOC</Link>.
             </p>
             <h2>Onboarding</h2>
-            <p>[TODO: onboarding window — confirm 2–6 days or 7–10 business days.] Shadow shifts are part of the sequence already described on the managed page.</p>
+            <p>Onboarding is 7–10 business days. Shadow shifts are part of the sequence already described on the managed page.</p>
           </div>
         </div>
       </section>
