@@ -52,6 +52,21 @@ module.exports = {
         destination: '/blog/how-to-set-up-a-noc',
         permanent: true,
       },
+      {
+        source: '/services',
+        destination: '/managed-noc-services-for-msps',
+        permanent: true,
+      },
+      {
+        source: '/testimonials',
+        destination: '/case-studies',
+        permanent: true,
+      },
+      {
+        source: '/noc247-calculator',
+        destination: '/calculator',
+        permanent: true,
+      },
     ];
   },
   async rewrites() {

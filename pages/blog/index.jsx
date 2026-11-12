@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import StickyBook from '../../components/StickyBook';
 import BlogCard from '../../components/BlogCard';
 import { fetchAllBlogs } from '../../lib/github';
 
@@ -163,7 +164,7 @@ export default function BlogIndexPage({ blogs = [] }) {
                       <rect width="18" height="18" x="3" y="4" rx="2" />
                       <path d="M3 10h18" />
                     </svg>
-                    Book a Call
+                    Book a scoping call
                   </a>
                   <Link
                     href="/contact"
@@ -194,6 +195,7 @@ export default function BlogIndexPage({ blogs = [] }) {
         </main>
 
         <Footer />
+        <StickyBook />
       </div>
     </>
   );

@@ -1,11 +1,26 @@
 import React from 'react'
 import Head from 'next/head'
+import Script from 'next/script'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import Ga4 from '../components/Analytics'
+import { GA_MEASUREMENT_ID } from '../lib/analytics'
 
 export default function App({ Component, pageProps }) {
   return (
     <>
+      <Script id="ga4-init" strategy="beforeInteractive">{`
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        window.gtag = gtag;
+        gtag('js', new Date());
+        gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: false });
+      `}</Script>
+      <Script
+        id="ga4-src"
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+      />
       <Head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -22,6 +37,7 @@ export default function App({ Component, pageProps }) {
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
       </Head>
       <Component {...pageProps} />
+      <Ga4 />
       <Analytics />
       <SpeedInsights />
     </>

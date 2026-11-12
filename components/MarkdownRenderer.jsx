@@ -21,7 +21,7 @@ export default function MarkdownRenderer({ content, rawHtml }) {
         rehypePlugins={[rehypeRaw]}
         components={{
           h1: ({ node, ...props }) => (
-            <h1 className="mt-8 mb-4 font-sans text-3xl font-bold tracking-tight text-neutral-950 md:text-4xl" {...props} />
+            <h2 className="mt-8 mb-4 font-sans text-3xl font-bold tracking-tight text-neutral-950 md:text-4xl" {...props} />
           ),
           h2: ({ node, ...props }) => (
             <h2 className="mt-12 mb-4 font-sans text-2xl font-bold tracking-tight text-neutral-950 md:text-3xl" {...props} />

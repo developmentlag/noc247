@@ -85,6 +85,13 @@ export default function Header({ activePath = '/blog' }) {
                   <p className="font-semibold text-neutral-950">RMM Integrations</p>
                   <p className="text-xs text-neutral-500">ConnectWise, NinjaOne, Datto</p>
                 </Link>
+                <Link
+                  href="/noc-services-for-msps-uk"
+                  className="block rounded-xl px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 hover:text-accent-600"
+                >
+                  <p className="font-semibold text-neutral-950">NOC services for MSPs in the UK</p>
+                  <p className="text-xs text-neutral-500">UK landing page</p>
+                </Link>
               </div>
             )}
           </div>
@@ -204,6 +211,12 @@ export default function Header({ activePath = '/blog' }) {
               className="rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50"
             >
               RMM Integrations
+            </Link>
+            <Link
+              href="/noc-services-for-msps-uk"
+              className="rounded-lg px-3 py-2 text-sm font-medium text-neutral-700 hover:bg-neutral-50"
+            >
+              NOC services for MSPs in the UK
             </Link>
             <div className="my-2 border-t border-neutral-100" />
             <Link

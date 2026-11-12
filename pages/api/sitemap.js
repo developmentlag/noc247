@@ -13,6 +13,15 @@ const STATIC_ROUTES = [
   { path: 'about', priority: '0.8', changefreq: 'monthly' },
   { path: 'contact', priority: '0.8', changefreq: 'monthly' },
   { path: 'blog', priority: '0.8', changefreq: 'daily' },
+  { path: 'free-alert-audit', priority: '0.8', changefreq: 'monthly' },
+  { path: 'noc-services-for-msps-uk', priority: '0.9', changefreq: 'monthly' },
+  { path: 'ninjaone-noc', priority: '0.7', changefreq: 'monthly' },
+  { path: 'n-able-noc', priority: '0.7', changefreq: 'monthly' },
+  { path: 'auvik-noc', priority: '0.7', changefreq: 'monthly' },
+  { path: 'connectwise-noc', priority: '0.7', changefreq: 'monthly' },
+  { path: 'kaseya-noc', priority: '0.7', changefreq: 'monthly' },
+  { path: 'noc-vs-in-house', priority: '0.7', changefreq: 'monthly' },
+  { path: 'case-studies', priority: '0.5', changefreq: 'monthly' },
 ];
 
 export async function generateSitemapXml() {

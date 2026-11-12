@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import StickyBook from '../../components/StickyBook';
 import MarkdownRenderer from '../../components/MarkdownRenderer';
 import { fetchAllBlogs, fetchBlogBySlug } from '../../lib/github';
 
@@ -219,6 +220,43 @@ export default function BlogPostPage({ blog }) {
                   <p className="mt-2 text-sm text-brand-600 leading-relaxed">
                     NOC247 monitors, triages, and resolves alerts inside your RMM around the clock under your brand. Book a scoping call to get started.
                   </p>
+                  <p className="mt-3 text-sm leading-7 text-brand-600">
+                    The full service is{' '}
+                    <Link href="/managed-noc-services-for-msps" className="link-underline">
+                      managed NOC services for MSPs
+                    </Link>
+                    .
+                    {slug === 'reduce-rmm-alert-noise' ? (
+                      <>
+                        {' '}
+                        If the queue is the problem, start with the{' '}
+                        <Link href="/free-alert-audit" className="link-underline">
+                          free after-hours alert audit
+                        </Link>
+                        .
+                      </>
+                    ) : null}
+                    {slug === 'cost-to-build-24x7-noc' || slug === 'how-to-set-up-a-noc' ? (
+                      <>
+                        {' '}
+                        Compare the rota on{' '}
+                        <Link href="/noc-vs-in-house" className="link-underline">
+                          in-house NOC or a white-label team
+                        </Link>{' '}
+                        and the{' '}
+                        <Link href="/calculator" className="link-underline">
+                          cost calculator
+                        </Link>
+                        .
+                      </>
+                    ) : null}
+                    {slug === 'l1-l2-l3-it-support' || slug === 'what-is-a-noc' ? (
+                      <>
+                        {' '}
+                        L1 and L2 scope for an MSP engagement is on that managed page, not only in this article.
+                      </>
+                    ) : null}
+                  </p>
                   <div className="mt-5 flex flex-wrap gap-3">
                     <a
                       href="https://calendly.com/noc247-scoping-call/30min"
@@ -226,7 +264,7 @@ export default function BlogPostPage({ blog }) {
                       rel="noreferrer noopener"
                       className="btn-accent text-sm"
                     >
-                      Book a consultation
+                      Book a scoping call
                     </a>
                     <Link href="/contact" className="btn-secondary text-sm">
                       Contact us
@@ -239,6 +277,7 @@ export default function BlogPostPage({ blog }) {
         </main>
 
         <Footer />
+        <StickyBook />
       </div>
     </>
   );
