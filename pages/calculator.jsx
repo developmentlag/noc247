@@ -70,7 +70,7 @@ export default function CalculatorPage() {
               <h2>What stays with the MSP</h2>
               <p>
                 Client relationships, approvals, and anything outside the runbook stay with you whether the night shift is in-house or white-label. The longer comparison is on{' '}
-                <Link href="/noc-vs-in-house">in-house NOC or a white-label team</Link>.
+                <Link href="/noc-vs-in-house" className="link-underline">in-house NOC or a white-label team</Link>.
               </p>
             </div>
             <CostEstimator />

@@ -64,17 +64,17 @@ export default function UkNocPage() {
             <h2>How white-label works under a UK brand</h2>
             <p>
               Tickets, the phone greeting, and the technician identity in the RMM stay under the MSP&apos;s name. Clients are not introduced to NOC247. The longer branding explanation is on{' '}
-              <Link href="/white-label-noc-services">white-label NOC</Link>.
+              <Link href="/white-label-noc-services" className="link-underline">white-label NOC</Link>.
             </p>
             <h2>Coverage</h2>
             <p>
               Coverage is 24/7/365. Hours and urgency for nights, weekends, and holidays are described on{' '}
-              <Link href="/247-noc-support">24/7 NOC support</Link>.
+              <Link href="/247-noc-support" className="link-underline">24/7 NOC support</Link>.
             </p>
             <h2>Tools</h2>
             <p>
               The same RMM list as the rest of the site: NinjaOne, N-able, Auvik, ConnectWise, Datto, Kaseya, and Atera. Start at the{' '}
-              <Link href="/rmm-integrations">RMM integrations hub</Link> or the tool pages linked from there.
+              <Link href="/rmm-integrations" className="link-underline">RMM integrations hub</Link> or the tool pages linked from there.
             </p>
             <h2>Onboarding</h2>
             <p>
@@ -83,12 +83,12 @@ export default function UkNocPage() {
             <h2>Pricing</h2>
             <p>
               Quotes are per endpoint. We do not publish a rate card. You get a quote within one US or UK business day. See{' '}
-              <Link href="/pricing">NOC pricing for MSPs</Link>.
+              <Link href="/pricing" className="link-underline">NOC pricing for MSPs</Link>.
             </p>
             <h2>The managed service</h2>
             <p>
               Scope, L1/L2, and what stays with the MSP are on{' '}
-              <Link href="/managed-noc-services-for-msps">managed NOC services for MSPs</Link>.
+              <Link href="/managed-noc-services-for-msps" className="link-underline">managed NOC services for MSPs</Link>.
               That URL should not be the one ranking for this UK query.
             </p>
           </div>
