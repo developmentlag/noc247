@@ -52,15 +52,15 @@ export default function NocVsInHousePage() {
             </p>
             <h2>What the cost posts already say</h2>
             <p>
-              Read <Link href="/blog/cost-to-build-24x7-noc">what a 24/7 NOC really costs to run in-house</Link> and{' '}
-              <Link href="/blog/how-to-set-up-a-noc">how to set up a NOC in-house</Link> beside this page. Use the{' '}
-              <Link href="/calculator">cost calculator</Link> to frame your own endpoint count. The figures are the ranges already published on this site.
+              Read <Link href="/blog/cost-to-build-24x7-noc" className="link-underline">what a 24/7 NOC really costs to run in-house</Link> and{' '}
+              <Link href="/blog/how-to-set-up-a-noc" className="link-underline">how to set up a NOC in-house</Link> beside this page. Use the{' '}
+              <Link href="/calculator" className="link-underline">cost calculator</Link> to frame your own endpoint count. The figures are the ranges already published on this site.
             </p>
             <h2>What stays with the MSP</h2>
             <p>
               Runbooks you approve, client communication, and the decision to escalate. The operating model for the team that takes the queue is{' '}
-              <Link href="/managed-noc-services-for-msps">managed NOC services for MSPs</Link>.
-              Branding is <Link href="/white-label-noc-services">white-label NOC</Link>.
+              <Link href="/managed-noc-services-for-msps" className="link-underline">managed NOC services for MSPs</Link>.
+              Branding is <Link href="/white-label-noc-services" className="link-underline">white-label NOC</Link>.
             </p>
             <h2>Onboarding</h2>
             <p>Onboarding is 7–10 business days. Shadow shifts are part of the sequence already described on the managed page.</p>
