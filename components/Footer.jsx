@@ -176,6 +176,21 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/noc-services-for-msps-uk" className="inline-flex items-center gap-1.5 py-1.5 text-brand-700 transition hover:text-accent-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-300"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>NOC services for MSPs in the UK
+                </Link>
+              </li>
+              <li>
+                <Link href="/free-alert-audit" className="inline-flex items-center gap-1.5 py-1.5 text-brand-700 transition hover:text-accent-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-300"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>Free alert audit
+                </Link>
+              </li>
+              <li>
+                <Link href="/calculator" className="inline-flex items-center gap-1.5 py-1.5 text-brand-700 transition hover:text-accent-600">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-300"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>In-house cost calculator
+                </Link>
+              </li>
+              <li>
                 <Link href="/pricing" className="inline-flex items-center gap-1.5 py-1.5 text-brand-700 transition hover:text-accent-600">
                   <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-brand-300"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>Pricing &amp; Packages
                 </Link>
@@ -204,8 +219,19 @@ export default function Footer() {
             <ul className="mt-4 space-y-2 text-sm text-brand-600">
               <li>Managed Service Providers</li>
               <li>United States</li>
-              <li>United Kingdom</li>
+              <li>
+                <Link href="/noc-services-for-msps-uk" className="hover:text-accent-600">
+                  United Kingdom
+                </Link>
+              </li>
               <li>Remote-first follow-the-sun</li>
+            </ul>
+            <ul className="mt-6 space-y-2 text-sm text-brand-600">
+              <li><Link href="/blog/what-is-a-noc" className="hover:text-accent-600">What is a NOC?</Link></li>
+              <li><Link href="/blog/l1-l2-l3-it-support" className="hover:text-accent-600">L1, L2 and L3 IT support</Link></li>
+              <li><Link href="/blog/reduce-rmm-alert-noise" className="hover:text-accent-600">Cut RMM alert noise</Link></li>
+              <li><Link href="/blog/cost-to-build-24x7-noc" className="hover:text-accent-600">What a 24/7 NOC costs</Link></li>
+              <li><Link href="/blog/how-to-set-up-a-noc" className="hover:text-accent-600">How to set up a NOC</Link></li>
             </ul>
             <div className="mt-6 flex flex-wrap gap-2" aria-label="Trust badges">
               <span className="rounded-full border border-brand-100 bg-white px-3 py-1 text-xs font-medium text-brand-500">24×7 Coverage</span>

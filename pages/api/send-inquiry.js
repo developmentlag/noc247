@@ -6,7 +6,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, company, email, rmm, endpoints, message = '' } = req.body || {};
+  const { name, company, email, rmm, endpoints, message = '', intent = '' } = req.body || {};
   const fields = [name, company, email, rmm, endpoints, message];
   if (
     fields.some((value) => typeof value !== 'string') ||
@@ -20,7 +20,8 @@ export default async function handler(req, res) {
     rmm.length > 100 ||
     !endpoints.trim() ||
     endpoints.length > 100 ||
-    message.length > 5000
+    message.length > 5000 ||
+    (intent && (typeof intent !== 'string' || intent.length > 80))
   ) {
     return res.status(400).json({ error: 'Please check the form details and try again.' });
   }
@@ -54,7 +55,10 @@ export default async function handler(req, res) {
         from: RESEND_FROM_EMAIL,
         to: ['hello@noc247.io'],
         reply_to: email.trim(),
-        subject: `NOC247 website inquiry — ${safeCompany}`,
+        subject:
+          intent === 'alert_audit'
+            ? `NOC247 alert audit request — ${safeCompany}`
+            : `NOC247 website inquiry — ${safeCompany}`,
         text: emailText,
       }),
     });
