@@ -1,5 +1,5 @@
 import ArticleShell from '../../components/ArticleShell';
-import ContentMarkdown from '../../components/ContentMarkdown';
+import PresentBody from '../../components/PresentBody';
 import { loadCase } from '../../lib/content';
 
 const PAGES = {
@@ -11,6 +11,10 @@ const PAGES = {
     h1: 'Illustrative scenario: how NOC247 would cover a 40-person Texas MSP overnight and on weekends',
     crumb: 'US MSP after-hours NOC',
     lang: 'en-US',
+    image: '/og/case-us.png',
+    hero: '/illustrations/region-us.svg',
+    alt: 'Stylised map of the United States with Texas marked. Illustrative header, not a client location.',
+    mid: 'The quickest way to see how much of your overnight noise needs a person is to send us a week of it.',
   },
   'uk-msp-out-of-hours-noc': {
     file: 'case-uk.md',
@@ -20,6 +24,10 @@ const PAGES = {
     h1: 'Illustrative scenario: how NOC247 would give a 25-person UK MSP out-of-hours cover',
     crumb: 'UK MSP out-of-hours NOC',
     lang: 'en-GB',
+    image: '/og/case-uk.png',
+    hero: '/illustrations/region-uk.svg',
+    alt: 'Stylised map of the United Kingdom. Illustrative header, not a client location.',
+    mid: 'Send one week of your out-of-hours alerts and see which pages needed a person.',
   },
   'australia-msp-24x7-noc': {
     file: 'case-au.md',
@@ -29,6 +37,10 @@ const PAGES = {
     h1: 'Illustrative scenario: how NOC247 would cover a 35-person Australian MSP across AEST and AWST',
     crumb: 'Australian MSP 24/7 NOC',
     lang: 'en-AU',
+    image: '/og/case-au.png',
+    hero: '/illustrations/region-au.svg',
+    alt: 'Stylised map of Australia with Sydney and Perth marked. Illustrative header, not a client location.',
+    mid: 'Send one week of your after-hours alerts and see which pages needed a person.',
   },
   'europe-msp-multi-country-noc': {
     file: 'case-eu.md',
@@ -38,6 +50,10 @@ const PAGES = {
     h1: 'Illustrative scenario: how NOC247 would cover a 30-person MSP serving clients in three EU countries',
     crumb: 'European MSP multi-country NOC',
     lang: 'en-US',
+    image: '/og/case-eu.png',
+    hero: '/illustrations/region-eu.svg',
+    alt: 'Stylised map marking the Netherlands, Belgium and Germany. Illustrative header, not a client location.',
+    mid: 'Send one week of your after-hours alerts and see which pages needed a person.',
   },
 };
 
@@ -62,7 +78,7 @@ function graph(slug, page, faq) {
         },
         mainEntityOfPage: url,
         url,
-        image: 'https://www.noc247.io/og-default.png',
+        image: `https://www.noc247.io${page.image}`,
         inLanguage: page.lang,
       },
       {
@@ -85,7 +101,7 @@ function graph(slug, page, faq) {
   };
 }
 
-export default function CaseStudyPage({ slug, banner, body, faq }) {
+export default function CaseStudyPage({ slug, banner, body, faq, headings }) {
   const page = PAGES[slug];
   const markdown = body.replace(/<!--\s*(REAL-RESULTS-SLOT:[^>]*?)\s*-->/g, '\n\n$1\n\n');
   return (
@@ -96,10 +112,13 @@ export default function CaseStudyPage({ slug, banner, body, faq }) {
       jsonLd={graph(slug, page, faq)}
       ogType="article"
       publishedTime="2026-11-16"
+      image={page.image}
       h1={page.h1}
       banner={banner}
+      toc={headings}
+      hero={{ src: page.hero, alt: page.alt, width: 640, height: 360 }}
     >
-      <ContentMarkdown markdown={markdown} />
+      <PresentBody markdown={markdown} midAfter="The gap" midText={page.mid} />
     </ArticleShell>
   );
 }

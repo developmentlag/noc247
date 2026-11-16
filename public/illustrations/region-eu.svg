@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img">
+  <title>Stylised map marking the Netherlands, Belgium and Germany</title>
+  <rect width="640" height="360" rx="28" fill="#0B2545"/>
+  <text x="36" y="48" fill="#8DA9C4" font-family="Inter, Noto Sans, sans-serif" font-size="13" font-weight="600" letter-spacing="1.4">EUROPE</text>
+  <path d="M250 120 h70 l16 40-10 36 h-60 l-18-28z" fill="#13315C" stroke="#1F6FEB" stroke-width="2"/>
+  <path d="M230 168 h36 l8 28-20 22 h-36z" fill="#13315C" stroke="#8DA9C4" stroke-width="2"/>
+  <path d="M330 108 h90 l20 50-14 70 h-78 l-16-46z" fill="#13315C" stroke="#8DA9C4" stroke-width="2"/>
+  <circle cx="286" cy="156" r="7" fill="#1F6FEB"/>
+  <text x="300" y="150" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="14" font-weight="700">Netherlands</text>
+  <text x="248" y="230" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13">Belgium</text>
+  <text x="390" y="200" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13">Germany</text>
+  <text x="36" y="300" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="16" font-weight="700">Three holiday calendars</text>
+  <text x="36" y="328" fill="#8DA9C4" font-family="Inter, Noto Sans, sans-serif" font-size="13">Illustrative region header. Not a client location.</text>
+</svg>

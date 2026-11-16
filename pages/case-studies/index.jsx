@@ -1,5 +1,5 @@
 import ArticleShell from '../../components/ArticleShell';
-import ContentMarkdown from '../../components/ContentMarkdown';
+import PresentBody from '../../components/PresentBody';
 import { loadCaseIndex } from '../../lib/content';
 
 const PATH = '/case-studies';
@@ -63,12 +63,24 @@ export default function CaseStudyIndex({ intro, callout, rest, faq }) {
       jsonLd={graph(faq)}
       h1={H1}
       publishedTime="2026-11-16"
+      image="/og/case-studies.png"
+      hero={{
+        src: '/illustrations/region-index.svg',
+        alt: 'Four illustrative scenario markers for the United States, the United Kingdom, Australia and Europe. Not client results.',
+        width: 640,
+        height: 360,
+      }}
     >
-      <p>{intro}</p>
+      <p className="present-lede">{intro}</p>
       <aside className="scenario-banner" aria-label="How to read these scenarios">
+        <p className="scenario-banner__label">Not a client result</p>
         <p>{callout}</p>
       </aside>
-      <ContentMarkdown markdown={rest} />
+      <PresentBody
+        markdown={rest}
+        midAfter="How to read the numbers"
+        midText="If your stack and your gap look similar, the free After-Hours Alert Audit will show how much of your own overnight alert volume needs a person."
+      />
     </ArticleShell>
   );
 }

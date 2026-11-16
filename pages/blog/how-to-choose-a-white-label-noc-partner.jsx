@@ -1,5 +1,5 @@
 import ArticleShell from '../../components/ArticleShell';
-import ContentMarkdown from '../../components/ContentMarkdown';
+import PresentBody from '../../components/PresentBody';
 import { loadChoosePartner } from '../../lib/content';
 
 const PATH = '/blog/how-to-choose-a-white-label-noc-partner';
@@ -28,7 +28,7 @@ function graph(faq) {
         },
         mainEntityOfPage: `https://www.noc247.io${PATH}`,
         url: `https://www.noc247.io${PATH}`,
-        image: 'https://www.noc247.io/og-default.png',
+        image: 'https://www.noc247.io/og/choose-partner.png',
         keywords: 'White-Label NOC, Buyer guide, Checklist',
         inLanguage: 'en-US',
       },
@@ -66,18 +66,24 @@ export default function ChoosePartnerPage({ body, faq, headings }) {
       jsonLd={graph(faq)}
       ogType="article"
       publishedTime="2026-11-16"
+      image="/og/choose-partner.png"
       h1={H1}
       meta="Updated 16 November 2026 · 12 min read · NOC247"
+      tags={['White-Label NOC', 'Buyer guide', 'Checklist']}
       toc={headings}
+      hero={{
+        src: '/illustrations/night-shift.svg',
+        alt: 'Night-shift timeline from an 18:00 handover, past a 2:14 backup alert, to the 08:00 day desk. Illustrative clock, not a client timeline.',
+        width: 640,
+        height: 400,
+      }}
     >
-      <ul className="mb-8 flex flex-wrap gap-2">
-        {['White-Label NOC', 'Buyer guide', 'Checklist'].map((tag) => (
-          <li key={tag} className="rounded-full border border-neutral-200 bg-neutral-50 px-3 py-1 text-xs font-medium text-neutral-600">
-            {tag}
-          </li>
-        ))}
-      </ul>
-      <ContentMarkdown markdown={body} />
+      <PresentBody
+        markdown={body}
+        checklist
+        midAfter="4. Escalation ownership"
+        midText="Before you compare vendors, find out how much of your overnight noise needs a human."
+      />
     </ArticleShell>
   );
 }

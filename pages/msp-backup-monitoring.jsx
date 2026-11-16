@@ -1,5 +1,5 @@
 import ArticleShell from '../components/ArticleShell';
-import ContentMarkdown from '../components/ContentMarkdown';
+import PresentBody from '../components/PresentBody';
 import { loadBackup } from '../lib/content';
 
 const PATH = '/msp-backup-monitoring';
@@ -57,9 +57,20 @@ export default function BackupMonitoringPage({ body, faq, headings }) {
       jsonLd={graph(faq)}
       h1={H1}
       publishedTime="2026-11-16"
+      image="/og/msp-backup.png"
       toc={headings}
+      hero={{
+        src: '/illustrations/backup-hero.svg',
+        alt: 'Diagram of an overnight backup: alert, five-way triage, a stop branch for a ransomware signal, then retry and a morning report. Not a dashboard screenshot.',
+        width: 640,
+        height: 360,
+      }}
     >
-      <ContentMarkdown markdown={body} />
+      <PresentBody
+        markdown={body}
+        midAfter="Step 4: controlled retry"
+        midText="Send one week of after-hours alerts from your RMM and the free After-Hours Alert Audit shows which pages needed a human and which were noise."
+      />
     </ArticleShell>
   );
 }
