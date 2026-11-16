@@ -16,6 +16,7 @@ export default function ToolPage({
   account,
   handoff,
   monitors,
+  monitorsLink,
   extra,
   faqs,
 }) {
@@ -47,7 +48,10 @@ export default function ToolPage({
             </article>
             <article>
               <h2 className="font-display text-2xl text-brand-700">Backup and patch monitors</h2>
-              <p className="mt-3 leading-7 text-brand-600">{monitors}</p>
+              <p className="mt-3 leading-7 text-brand-600">
+                {monitors}
+                {monitorsLink ? <> {monitorsLink}</> : null}
+              </p>
             </article>
             {extra ? (
               <article>

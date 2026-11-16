@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import ToolPage from '../components/ToolPage';
 
 const faqs = [
@@ -28,6 +29,7 @@ export default function NinjaOneNocPage() {
       account="A technician account is created inside your NinjaOne tenant, named the way your clients already see your team. Policies, organizations, and device groups stay yours. The NOC reads the monitors you already run and follows the runbook you approve. Nothing on this page says devices must be re-enrolled."
       handoff="When a NinjaOne alert needs a ticket, it is written into your PSA with the device, the condition, and the step already tried. Your engineers see your ticket numbers. Escalation is to your team, not to a NOC247 queue your clients can see."
       monitors="Backup job success and the warnings around it, plus patch state against the windows you approve, are part of the same triage the managed service already describes. NinjaOne is where those checks are read. Failed jobs are worked from the runbook rather than left as a morning list."
+      monitorsLink={<><span>See </span><Link href="/msp-backup-monitoring" className="link-underline">how a failed backup is triaged overnight</Link>.</>}
       extra={{
         heading: 'What this page is not',
         body: 'It is not a NinjaOne migration. Devices stay in your tenant. If the stack is mixed, say so on the 30-minute scoping call. Onboarding is 7–10 business days.',

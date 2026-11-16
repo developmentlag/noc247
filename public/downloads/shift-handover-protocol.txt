@@ -1,0 +1,50 @@
+SHIFT HANDOVER PROTOCOL: MSP <-> White-Label NOC
+Version: [1.0]   Owner: [MSP service delivery lead]   Effective: [date]
+
+1. HANDOVER WINDOWS (local time)
+   - MSP -> NOC: [18:00], package sent by [17:30]
+   - NOC -> MSP: [08:00], report sent by [07:30]
+   - Weekends and holidays: [Friday 18:00 -> Monday 08:00],
+     with a mid-point check at [Saturday 12:00]
+
+2. OUTGOING PACKAGE (sender completes every line; "none" is a valid answer)
+   [ ] Open P1/P2 tickets: ID, client, current state, owner, next action, deadline
+   [ ] Active maintenance windows and change freezes, with start/end times
+   [ ] Known-noisy alerts and approved suppressions, with expiry dates
+   [ ] Clients with special instructions (VIP, regulated, do-not-touch systems)
+   [ ] Pending approvals and who can grant them tonight
+   [ ] On-call roster: name, phone, backup contact, time zone
+
+3. OWNERSHIP RULES
+   - A ticket changes owner only when the receiver writes "ACK <name> <time>".
+   - Until ACK, the sender owns it and stays reachable.
+   - Every ticket carries one named owner. Never "team" or "NOC".
+   - The owner writes the next action and its deadline in the ticket
+     before handing over.
+
+4. ACTION PERMISSIONS DURING THE SHIFT
+   - Tier 1: acknowledge, enrich, ticket, notify. Always allowed.
+   - Tier 2: runbook actions listed per client. Log each action in the ticket.
+   - Tier 3: anything else needs approval from [named contact].
+     Record who approved and when.
+
+5. ESCALATION CLOCK (adjust the minutes to your SLA)
+   - P1: phone [primary on-call]. No answer after [10] min, phone [backup].
+     After [10] more, phone [owner/director].
+   - P2: phone or SMS [primary]. No ack after [20] min, move to backup.
+   - P3/P4: ticket and morning report. No overnight contact.
+   - Email is never the only channel for P1/P2.
+
+6. INCOMING REPORT (NOC completes before handing back)
+   [ ] Alerts received / tickets created / tickets closed
+   [ ] Actions taken, each with ticket ID and the approval reference
+   [ ] Items needing a human decision this morning, ranked
+   [ ] Recurring alerts with a tuning proposal
+   [ ] Near-misses and SLA breaches, with cause
+
+7. CLOSE-OUT
+   - Both sides post "HANDOVER COMPLETE <time>" in [channel/ticket].
+   - Anything unacknowledged within [15] min of the window starts the
+     escalation clock.
+   - Review the protocol monthly: remove steps nobody uses, add the one
+     that failed last.

@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 const ORIGIN = 'https://www.noc247.io';
 
-export default function PageMeta({ title, description, path, jsonLd }) {
+export default function PageMeta({ title, description, path, jsonLd, ogType = 'website', publishedTime }) {
   const url = `${ORIGIN}${path}`;
   const image = `${ORIGIN}/og-default.png`;
 
@@ -12,7 +12,8 @@ export default function PageMeta({ title, description, path, jsonLd }) {
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
       <meta name="robots" content="index, follow" />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
+      {publishedTime ? <meta property="article:published_time" content={publishedTime} /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />

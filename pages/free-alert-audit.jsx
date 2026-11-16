@@ -85,7 +85,9 @@ export default function FreeAlertAuditPage() {
                 <Link href="/ninjaone-noc" className="link-underline">NinjaOne</Link>,{' '}
                 <Link href="/n-able-noc" className="link-underline">N-able</Link>,{' '}
                 <Link href="/auvik-noc" className="link-underline">Auvik</Link>,{' '}
-                <Link href="/blog/reduce-rmm-alert-noise" className="link-underline">cutting RMM alert noise</Link>.
+                <Link href="/blog/reduce-rmm-alert-noise" className="link-underline">cutting RMM alert noise</Link>.{' '}
+                See <Link href="/msp-backup-monitoring" className="link-underline">how overnight backup failures are handled</Link> and the{' '}
+                <Link href="/case-studies" className="link-underline">scenario case studies</Link>.
               </p>
             </article>
             <article>

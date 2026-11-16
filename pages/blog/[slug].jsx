@@ -233,6 +233,10 @@ export default function BlogPostPage({ blog }) {
                         <Link href="/free-alert-audit" className="link-underline">
                           free after-hours alert audit
                         </Link>
+                        {' '}
+                        <Link href="/msp-backup-monitoring" className="link-underline">
+                          how NOC247 triages overnight backup failures
+                        </Link>
                         .
                       </>
                     ) : null}

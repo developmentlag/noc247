@@ -21,7 +21,24 @@ const STATIC_ROUTES = [
   { path: 'connectwise-noc', priority: '0.7', changefreq: 'monthly' },
   { path: 'kaseya-noc', priority: '0.7', changefreq: 'monthly' },
   { path: 'noc-vs-in-house', priority: '0.7', changefreq: 'monthly' },
+  { path: 'case-studies', priority: '0.8', changefreq: 'monthly', lastmod: '2026-11-16' },
+  { path: 'case-studies/us-msp-after-hours-noc', priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-16' },
+  { path: 'case-studies/uk-msp-out-of-hours-noc', priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-16' },
+  { path: 'case-studies/australia-msp-24x7-noc', priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-16' },
+  { path: 'case-studies/europe-msp-multi-country-noc', priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-16' },
+  { path: 'msp-backup-monitoring', priority: '0.8', changefreq: 'monthly', lastmod: '2026-11-16' },
+  { path: 'blog/how-to-choose-a-white-label-noc-partner', priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-16' },
 ];
+
+const LINKED_LASTMOD = new Set([
+  'blog',
+  'pricing',
+  'free-alert-audit',
+  'managed-noc-services-for-msps',
+  'ninjaone-noc',
+  'noc-vs-in-house',
+  'noc-services-for-msps-uk',
+]);
 
 export async function generateSitemapXml() {
   const blogs = await fetchAllBlogs();
@@ -35,7 +52,7 @@ export async function generateSitemapXml() {
     const loc = page.path ? `https://www.noc247.io/${page.path}` : 'https://www.noc247.io/';
     xml += '  <url>\n';
     xml += `    <loc>${loc}</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <lastmod>${page.lastmod || (LINKED_LASTMOD.has(page.path) ? '2026-11-16' : today)}</lastmod>\n`;
     xml += `    <priority>${page.priority}</priority>\n`;
     xml += '  </url>\n';
   }
@@ -43,7 +60,9 @@ export async function generateSitemapXml() {
   // 2. Dynamic Blog Pages
   for (const blog of blogs) {
     const loc = `https://www.noc247.io/blog/${blog.slug}`;
-    const lastmod = blog.dateModified || blog.datePublished || today;
+    const lastmod = blog.slug === 'reduce-rmm-alert-noise'
+      ? '2026-11-16'
+      : (blog.dateModified || blog.datePublished || today);
     xml += '  <url>\n';
     xml += `    <loc>${loc}</loc>\n`;
     xml += `    <lastmod>${lastmod}</lastmod>\n`;
