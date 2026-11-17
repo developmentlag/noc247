@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 328" width="640" height="328" role="img">
   <title>Night-shift timeline from the evening handover to the morning report</title>
   <rect width="640" height="400" rx="28" fill="#0B2545"/>
   <circle cx="520" cy="78" r="28" fill="#1F6FEB" opacity="0.9"/>
@@ -26,6 +26,4 @@
     <text x="560" y="286" fill="#ffffff" font-size="14" font-weight="700">08:00</text>
     <text x="560" y="306" fill="#8DA9C4" font-size="12">Day desk</text>
   </g>
-  <rect x="40" y="338" width="560" height="36" rx="18" fill="#13315C"/>
-  <text x="320" y="361" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13" text-anchor="middle">Illustrative clock. Not a client timeline.</text>
 </svg>

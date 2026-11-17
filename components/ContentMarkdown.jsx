@@ -219,6 +219,59 @@ function WeightList({ rows }) {
   );
 }
 
+function findLink(node, found) {
+  if (node == null) return found;
+  if (Array.isArray(node)) {
+    node.forEach((child) => findLink(child, found));
+    return found;
+  }
+  if (React.isValidElement(node)) {
+    if (node.props && node.props.href) {
+      found.href = node.props.href;
+      found.label = textOf(node.props.children).trim();
+    }
+    findLink(node.props.children, found);
+  }
+  return found;
+}
+
+function polishCtaDescription(text) {
+  const cleaned = text.replace(/^[\s:–—-]+/, '').replace(/\s+/g, ' ').trim();
+  if (!cleaned) return '';
+  if (/^we will walk through your RMM, endpoint count and overnight gaps\.?$/i.test(cleaned)) {
+    return "We'll walk through your RMM, endpoint count and overnight gaps.";
+  }
+  if (/^send one week of after-hours alerts from your RMM and get counts and examples from your own data\.?$/i.test(cleaned)) {
+    return 'Send one week of after-hours alerts from your RMM and get counts and examples from your own data.';
+  }
+  return cleaned.charAt(0).toUpperCase() + cleaned.slice(1);
+}
+
+function CtaCards({ children }) {
+  const items = React.Children.toArray(children).filter(React.isValidElement);
+  return (
+    <ul className="cta-cards">
+      {items.map((item, index) => {
+        const link = findLink(item.props.children, { href: '', label: '' });
+        const description = polishCtaDescription(textOf(item.props.children).replace(link.label, ''));
+        const external = /^https?:/i.test(link.href);
+        return (
+          <li className="cta-card" key={link.href || index}>
+            <a
+              className={index === 0 ? 'cta-card__btn cta-card__btn--primary' : 'cta-card__btn'}
+              href={link.href}
+              {...(external ? { target: '_blank', rel: 'noreferrer noopener' } : {})}
+            >
+              {link.label}
+            </a>
+            {description ? <p>{description}</p> : null}
+          </li>
+        );
+      })}
+    </ul>
+  );
+}
+
 function PlainTable({ children }) {
   return (
     <div className="data-table">
@@ -243,7 +296,7 @@ export default function ContentMarkdown({ markdown, heading = '' }) {
           a: MarkdownLink,
           h2: ({ children }) => <h2 id={headingId(textOf(children))}>{children}</h2>,
           h3: ({ children }) => <h3 id={headingId(textOf(children))}>{children}</h3>,
-          ul: ({ children }) => (isCta ? <ul className="cta-actions">{children}</ul> : cardUl ? <CardList>{children}</CardList> : <ul>{children}</ul>),
+          ul: ({ children }) => (isCta ? <CtaCards>{children}</CtaCards> : cardUl ? <CardList>{children}</CardList> : <ul>{children}</ul>),
           ol: ({ children }) => (stepOl ? <StepList>{children}</StepList> : <ol>{children}</ol>),
           p: ({ children }) => {
             const text = textOf(children).trim();

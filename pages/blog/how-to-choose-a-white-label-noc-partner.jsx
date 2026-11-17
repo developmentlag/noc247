@@ -73,9 +73,9 @@ export default function ChoosePartnerPage({ body, faq, headings }) {
       toc={headings}
       hero={{
         src: '/illustrations/night-shift.svg',
-        alt: 'Night-shift timeline from an 18:00 handover, past a 2:14 backup alert, to the 08:00 day desk. Illustrative clock, not a client timeline.',
+        alt: 'Night-shift timeline from an 18:00 handover, past a 2:14 backup alert, to the 08:00 day desk.',
         width: 640,
-        height: 400,
+        height: 328,
       }}
     >
       <PresentBody
