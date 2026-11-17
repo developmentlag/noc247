@@ -21,6 +21,7 @@ const STATIC_ROUTES = [
   { path: 'connectwise-noc', priority: '0.7', changefreq: 'monthly' },
   { path: 'kaseya-noc', priority: '0.7', changefreq: 'monthly' },
   { path: 'noc-vs-in-house', priority: '0.7', changefreq: 'monthly' },
+  { path: 'blog/how-to-choose-a-white-label-noc-partner', priority: '0.7', changefreq: 'monthly', lastmod: '2026-11-16' },
 ];
 
 export async function generateSitemapXml() {
@@ -35,7 +36,7 @@ export async function generateSitemapXml() {
     const loc = page.path ? `https://www.noc247.io/${page.path}` : 'https://www.noc247.io/';
     xml += '  <url>\n';
     xml += `    <loc>${loc}</loc>\n`;
-    xml += `    <lastmod>${today}</lastmod>\n`;
+    xml += `    <lastmod>${page.lastmod || today}</lastmod>\n`;
     xml += `    <priority>${page.priority}</priority>\n`;
     xml += '  </url>\n';
   }

@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" width="720" height="320" role="img">
+  <title>RMM, PSA, backup and network tools feeding one NOC desk</title>
+  <rect width="720" height="320" rx="24" fill="#F7F9FC"/>
+  <rect x="1" y="1" width="718" height="318" rx="23" fill="none" stroke="#D9E3F4"/>
+  <g font-family="Inter, Noto Sans, sans-serif" text-anchor="middle">
+    <rect x="36" y="36" width="140" height="72" rx="14" fill="#ffffff" stroke="#D9E3F4"/>
+    <text x="106" y="68" fill="#0B2545" font-size="16" font-weight="700">RMM</text>
+    <text x="106" y="88" fill="#3A506B" font-size="12">Alerts</text>
+    <rect x="206" y="36" width="140" height="72" rx="14" fill="#ffffff" stroke="#D9E3F4"/>
+    <text x="276" y="68" fill="#0B2545" font-size="16" font-weight="700">PSA</text>
+    <text x="276" y="88" fill="#3A506B" font-size="12">Tickets</text>
+    <rect x="376" y="36" width="140" height="72" rx="14" fill="#ffffff" stroke="#D9E3F4"/>
+    <text x="446" y="68" fill="#0B2545" font-size="16" font-weight="700">Backup</text>
+    <text x="446" y="88" fill="#3A506B" font-size="12">Job status</text>
+    <rect x="546" y="36" width="140" height="72" rx="14" fill="#ffffff" stroke="#D9E3F4"/>
+    <text x="616" y="68" fill="#0B2545" font-size="16" font-weight="700">Network</text>
+    <text x="616" y="88" fill="#3A506B" font-size="12">Links</text>
+  </g>
+  <path d="M106 108 V150 H360 V176" fill="none" stroke="#1F6FEB" stroke-width="2"/>
+  <path d="M276 108 V140 H360" fill="none" stroke="#1F6FEB" stroke-width="2"/>
+  <path d="M446 108 V140 H360" fill="none" stroke="#1F6FEB" stroke-width="2"/>
+  <path d="M616 108 V150 H360" fill="none" stroke="#1F6FEB" stroke-width="2"/>
+  <rect x="210" y="176" width="300" height="88" rx="18" fill="#0B2545"/>
+  <text x="360" y="214" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="18" font-weight="700" text-anchor="middle">NOC desk</text>
+  <text x="360" y="238" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13" text-anchor="middle">Inside your tenant, under your identity</text>
+  <text x="360" y="296" fill="#8DA9C4" font-family="Inter, Noto Sans, sans-serif" font-size="12" text-anchor="middle">Diagram of where the work happens. Not a product screenshot.</text>
+</svg>

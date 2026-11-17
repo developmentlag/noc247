@@ -227,6 +227,7 @@ export default function Footer() {
               <li>Remote-first follow-the-sun</li>
             </ul>
             <ul className="mt-6 space-y-2 text-sm text-brand-600">
+              <li><Link href="/blog/how-to-choose-a-white-label-noc-partner" className="hover:text-accent-600">How to choose a white-label NOC partner</Link></li>
               <li><Link href="/blog/what-is-a-noc" className="hover:text-accent-600">What is a NOC?</Link></li>
               <li><Link href="/blog/l1-l2-l3-it-support" className="hover:text-accent-600">L1, L2 and L3 IT support</Link></li>
               <li><Link href="/blog/reduce-rmm-alert-noise" className="hover:text-accent-600">Cut RMM alert noise</Link></li>

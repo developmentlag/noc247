@@ -2,9 +2,9 @@ import Head from 'next/head';
 
 const ORIGIN = 'https://www.noc247.io';
 
-export default function PageMeta({ title, description, path, jsonLd }) {
+export default function PageMeta({ title, description, path, jsonLd, ogType = 'website', publishedTime, image = '/og-default.png' }) {
   const url = `${ORIGIN}${path}`;
-  const image = `${ORIGIN}/og-default.png`;
+  const imageUrl = image.startsWith('http') ? image : `${ORIGIN}${image}`;
 
   return (
     <Head>
@@ -12,17 +12,18 @@ export default function PageMeta({ title, description, path, jsonLd }) {
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
       <meta name="robots" content="index, follow" />
-      <meta property="og:type" content="website" />
+      <meta property="og:type" content={ogType} />
+      {publishedTime ? <meta property="article:published_time" content={publishedTime} /> : null}
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:url" content={url} />
-      <meta property="og:image" content={image} />
+      <meta property="og:image" content={imageUrl} />
       <meta property="og:site_name" content="NOC247" />
       <meta property="og:locale" content="en_US" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={image} />
+      <meta name="twitter:image" content={imageUrl} />
       {jsonLd ? (
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       ) : null}

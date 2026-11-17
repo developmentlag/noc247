@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 280" width="720" height="280" role="img">
+  <title>Handover flow from the MSP day desk to the night NOC and back</title>
+  <rect width="720" height="280" rx="24" fill="#F7F9FC"/>
+  <rect x="1" y="1" width="718" height="278" rx="23" fill="none" stroke="#D9E3F4"/>
+  <g font-family="Inter, Noto Sans, sans-serif" text-anchor="middle">
+    <rect x="24" y="78" width="140" height="92" rx="16" fill="#0B2545"/>
+    <text x="94" y="118" fill="#ffffff" font-size="15" font-weight="700">Day desk</text>
+    <text x="94" y="140" fill="#B3C7E6" font-size="12">MSP</text>
+    <path d="M172 124 H206" stroke="#1F6FEB" stroke-width="2" marker-end="url(#arr)"/>
+    <rect x="210" y="78" width="150" height="92" rx="16" fill="#ffffff" stroke="#1F6FEB" stroke-width="2"/>
+    <text x="285" y="118" fill="#0B2545" font-size="15" font-weight="700">Package</text>
+    <text x="285" y="140" fill="#3A506B" font-size="12">Open tickets</text>
+    <path d="M368 124 H402" stroke="#1F6FEB" stroke-width="2"/>
+    <rect x="406" y="78" width="140" height="92" rx="16" fill="#1F6FEB"/>
+    <text x="476" y="118" fill="#ffffff" font-size="15" font-weight="700">Night NOC</text>
+    <text x="476" y="140" fill="#E7F0FF" font-size="12">On shift</text>
+    <path d="M554 124 H588" stroke="#1F6FEB" stroke-width="2"/>
+    <rect x="592" y="78" width="104" height="92" rx="16" fill="#0B2545"/>
+    <text x="644" y="118" fill="#ffffff" font-size="15" font-weight="700">Report</text>
+    <text x="644" y="140" fill="#B3C7E6" font-size="12">Morning</text>
+  </g>
+  <text x="360" y="220" fill="#3A506B" font-family="Inter, Noto Sans, sans-serif" font-size="14" text-anchor="middle">A ticket changes owner only when the next shift acknowledges it.</text>
+  <text x="360" y="246" fill="#8DA9C4" font-family="Inter, Noto Sans, sans-serif" font-size="12" text-anchor="middle">Diagram of the protocol on this page. Not a client handover.</text>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#1F6FEB"/>
+    </marker>
+  </defs>
+</svg>
