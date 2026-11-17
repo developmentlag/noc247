@@ -7,5 +7,4 @@
   <circle cx="318" cy="214" r="8" fill="#1F6FEB"/>
   <text x="360" y="188" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="16" font-weight="700">Out of hours</text>
   <text x="360" y="210" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13">Bank holidays included</text>
-  <text x="36" y="328" fill="#8DA9C4" font-family="Inter, Noto Sans, sans-serif" font-size="13">Illustrative region header. Not a client location.</text>
 </svg>

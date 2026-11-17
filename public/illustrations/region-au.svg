@@ -8,5 +8,4 @@
   <text x="150" y="230" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13">Perth</text>
   <text x="412" y="222" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="13" font-weight="700">Sydney</text>
   <text x="36" y="300" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="16" font-weight="700">AEST and AWST</text>
-  <text x="36" y="328" fill="#8DA9C4" font-family="Inter, Noto Sans, sans-serif" font-size="13">Illustrative region header. Not a client location.</text>
 </svg>

@@ -14,7 +14,7 @@ const CASES = [
   { name: 'European MSP multi-country NOC', path: '/case-studies/europe-msp-multi-country-noc' },
 ];
 
-function graph(faq) {
+function graph() {
   return {
     '@context': 'https://schema.org',
     '@graph': [
@@ -36,14 +36,6 @@ function graph(faq) {
         },
       },
       {
-        '@type': 'FAQPage',
-        mainEntity: faq.map((item) => ({
-          '@type': 'Question',
-          name: item.question,
-          acceptedAnswer: { '@type': 'Answer', text: item.answer },
-        })),
-      },
-      {
         '@type': 'BreadcrumbList',
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://www.noc247.io' },
@@ -54,28 +46,24 @@ function graph(faq) {
   };
 }
 
-export default function CaseStudyIndex({ intro, callout, rest, faq }) {
+export default function CaseStudyIndex({ intro, rest }) {
   return (
     <ArticleShell
       title={TITLE}
       description={DESCRIPTION}
       path={PATH}
-      jsonLd={graph(faq)}
+      jsonLd={graph()}
       h1={H1}
       publishedTime="2026-11-16"
       image="/og/case-studies.png"
       hero={{
         src: '/illustrations/region-index.svg',
-        alt: 'Four illustrative scenario markers for the United States, the United Kingdom, Australia and Europe. Not client results.',
+        alt: 'Four region markers for the United States, the United Kingdom, Australia and Europe.',
         width: 640,
-        height: 360,
+        height: 300,
       }}
     >
       <p className="present-lede">{intro}</p>
-      <aside className="scenario-banner" aria-label="How to read these scenarios">
-        <p className="scenario-banner__label">Not a client result</p>
-        <p>{callout}</p>
-      </aside>
       <PresentBody
         markdown={rest}
         midAfter="How to read the numbers"
@@ -87,13 +75,9 @@ export default function CaseStudyIndex({ intro, callout, rest, faq }) {
 
 export function getStaticProps() {
   const page = loadCaseIndex();
-  const parts = page.body.split('\n\n');
-  return {
-    props: {
-      faq: page.faq,
-      intro: parts[0],
-      callout: parts[1],
-      rest: parts.slice(2).join('\n\n'),
-    },
-  };
+  const intro = page.body.split('\n\n')[0];
+  const rest = page.body
+    .replace(/^[\s\S]*?(?=## The four scenarios)/, '')
+    .replace(/\n## FAQ[\s\S]*$/, '');
+  return { props: { intro, rest } };
 }

@@ -69,10 +69,10 @@ function leadNumber(label, value) {
 }
 
 const REGIONS = [
-  { test: /Australia|Australian/i, tag: 'Australia', src: '/illustrations/region-au.svg', alt: 'Stylised map of Australia with Sydney and Perth marked. Illustrative header, not a client location.' },
-  { test: /\bUK\b|United Kingdom/i, tag: 'United Kingdom', src: '/illustrations/region-uk.svg', alt: 'Stylised map of the United Kingdom. Illustrative header, not a client location.' },
-  { test: /Europe|European/i, tag: 'Europe', src: '/illustrations/region-eu.svg', alt: 'Stylised map marking the Netherlands, Belgium and Germany. Illustrative header, not a client location.' },
-  { test: /\bUS\b|Texas|United States/i, tag: 'United States', src: '/illustrations/region-us.svg', alt: 'Stylised map of the United States with Texas marked. Illustrative header, not a client location.' },
+  { test: /Australia|Australian/i, tag: 'Australia', src: '/illustrations/region-au.svg', alt: 'Stylised map of Australia with Sydney and Perth marked.' },
+  { test: /\bUK\b|United Kingdom/i, tag: 'United Kingdom', src: '/illustrations/region-uk.svg', alt: 'Stylised map of the United Kingdom.' },
+  { test: /Europe|European/i, tag: 'Europe', src: '/illustrations/region-eu.svg', alt: 'Stylised map marking the Netherlands, Belgium and Germany.' },
+  { test: /\bUS\b|Texas|United States/i, tag: 'United States', src: '/illustrations/region-us.svg', alt: 'Stylised map of the United States with Texas marked.' },
 ];
 
 function regionFor(node) {
@@ -141,7 +141,7 @@ function RegionGrid({ rows }) {
             <dl>
               {headers.slice(1).map((header, index) => (
                 <div key={header}>
-                  <dt>{header}</dt>
+                  <dt>{header.replace(/\s*\(assumed\)/gi, '')}</dt>
                   <dd>{row[index + 1]}</dd>
                 </div>
               ))}

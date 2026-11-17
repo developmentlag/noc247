@@ -13,7 +13,7 @@ const PAGES = {
     lang: 'en-US',
     image: '/og/case-us.png',
     hero: '/illustrations/region-us.svg',
-    alt: 'Stylised map of the United States with Texas marked. Illustrative header, not a client location.',
+    alt: 'Stylised map of the United States with Texas marked.',
     mid: 'The quickest way to see how much of your overnight noise needs a person is to send us a week of it.',
   },
   'uk-msp-out-of-hours-noc': {
@@ -26,7 +26,7 @@ const PAGES = {
     lang: 'en-GB',
     image: '/og/case-uk.png',
     hero: '/illustrations/region-uk.svg',
-    alt: 'Stylised map of the United Kingdom. Illustrative header, not a client location.',
+    alt: 'Stylised map of the United Kingdom.',
     mid: 'Send one week of your out-of-hours alerts and see which pages needed a person.',
   },
   'australia-msp-24x7-noc': {
@@ -39,7 +39,7 @@ const PAGES = {
     lang: 'en-AU',
     image: '/og/case-au.png',
     hero: '/illustrations/region-au.svg',
-    alt: 'Stylised map of Australia with Sydney and Perth marked. Illustrative header, not a client location.',
+    alt: 'Stylised map of Australia with Sydney and Perth marked.',
     mid: 'Send one week of your after-hours alerts and see which pages needed a person.',
   },
   'europe-msp-multi-country-noc': {
@@ -52,7 +52,7 @@ const PAGES = {
     lang: 'en-US',
     image: '/og/case-eu.png',
     hero: '/illustrations/region-eu.svg',
-    alt: 'Stylised map marking the Netherlands, Belgium and Germany. Illustrative header, not a client location.',
+    alt: 'Stylised map marking the Netherlands, Belgium and Germany.',
     mid: 'Send one week of your after-hours alerts and see which pages needed a person.',
   },
 };
