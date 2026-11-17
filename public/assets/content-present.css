@@ -33,6 +33,7 @@
 .present-page .cta-card{display:flex;flex-direction:column;gap:.75rem;margin:0;padding:1rem;list-style:none;background:#fff;border-radius:1rem;color:#13315C}
 .present-page .cta-card::marker{content:none}
 .present-page .cta-card__btn{display:flex;align-items:center;justify-content:center;box-sizing:border-box;min-height:4.5rem;padding:.8rem 1rem;border-radius:.8rem;border:1px solid transparent;background:#fff;color:#0B2545;font-weight:600;line-height:1.3;text-align:center;text-decoration:none}
+.present-page .cta-card__btn:not(.cta-card__btn--primary){border-color:#13315C}
 .present-page .cta-card__btn--primary{background:#1F6FEB;border-color:#1F6FEB;color:#fff}
 .present-page .cta-card__btn:hover,.present-page .cta-card__btn:focus-visible{text-decoration:underline;text-underline-offset:3px}
 .present-page .cta-card p{margin:0;color:#13315C;font-weight:400;line-height:1.5}
