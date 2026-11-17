@@ -69,10 +69,10 @@ function leadNumber(label, value) {
 }
 
 const REGIONS = [
-  { test: /Australia|Australian/i, tag: 'Australia', src: '/illustrations/region-au.svg', alt: 'Stylised map of Australia with Sydney and Perth marked. Illustrative header, not a client location.' },
-  { test: /\bUK\b|United Kingdom/i, tag: 'United Kingdom', src: '/illustrations/region-uk.svg', alt: 'Stylised map of the United Kingdom. Illustrative header, not a client location.' },
-  { test: /Europe|European/i, tag: 'Europe', src: '/illustrations/region-eu.svg', alt: 'Stylised map marking the Netherlands, Belgium and Germany. Illustrative header, not a client location.' },
-  { test: /\bUS\b|Texas|United States/i, tag: 'United States', src: '/illustrations/region-us.svg', alt: 'Stylised map of the United States with Texas marked. Illustrative header, not a client location.' },
+  { test: /Australia|Australian/i, tag: 'Australia', src: '/illustrations/region-au.webp', alt: 'Night map of Australia with city lights at Sydney and Perth.' },
+  { test: /\bUK\b|United Kingdom/i, tag: 'United Kingdom', src: '/illustrations/region-uk.webp', alt: 'Night map of the United Kingdom with city lights at London, Manchester and Edinburgh.' },
+  { test: /Europe|European/i, tag: 'Europe', src: '/illustrations/region-eu.webp', alt: 'Night map of the Netherlands, Belgium and western Germany with city lights at Amsterdam, Brussels and Frankfurt.' },
+  { test: /\bUS\b|Texas|United States/i, tag: 'United States', src: '/illustrations/region-us.webp', alt: 'Night map of Texas with city lights at Dallas, Houston and Austin.' },
 ];
 
 function regionFor(node) {
@@ -117,7 +117,6 @@ function GlanceGrid({ rows }) {
         const figure = leadNumber(label, value);
         return (
           <article className="glance-card" key={label}>
-            <p className="kicker">Model input</p>
             {figure ? <p className="figure">{figure}</p> : null}
             <p><strong>{label}.</strong> {row[1]}</p>
           </article>
@@ -135,13 +134,13 @@ function RegionGrid({ rows }) {
         const region = regionFor(row[0]);
         return (
           <article className="region-card" key={textOf(row[0])}>
-            <img src={region.src} alt={region.alt} width="640" height="360" loading="lazy" decoding="async" />
+            <img src={region.src} alt={region.alt} width="1600" height="900" loading="lazy" decoding="async" />
             <p className="tag">{region.tag}</p>
             <h3>{row[0]}</h3>
             <dl>
               {headers.slice(1).map((header, index) => (
                 <div key={header}>
-                  <dt>{header}</dt>
+                  <dt>{header.replace(/\s*\(assumed\)/gi, '')}</dt>
                   <dd>{row[index + 1]}</dd>
                 </div>
               ))}

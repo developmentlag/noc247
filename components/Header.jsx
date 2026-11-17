@@ -16,14 +16,14 @@ export default function Header({ activePath = '/blog' }) {
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-6 xl:gap-8" aria-label="Primary">
+        <nav className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center gap-3 whitespace-nowrap xl:gap-6" aria-label="Primary">
           {/* NOC Services Dropdown */}
           <div className="relative">
             <button
               type="button"
               onClick={() => setServicesOpen(!servicesOpen)}
               onMouseEnter={() => setServicesOpen(true)}
-              className="flex items-center gap-1.5 text-[0.95rem] text-neutral-600 transition hover:text-neutral-950"
+              className="flex items-center gap-1.5 text-[0.875rem] text-neutral-600 transition hover:text-neutral-950 xl:text-[0.95rem]"
               aria-haspopup="true"
               aria-expanded={servicesOpen}
             >
@@ -98,25 +98,25 @@ export default function Header({ activePath = '/blog' }) {
 
           <Link
             href="/calculator"
-            className="text-[0.95rem] transition text-neutral-600 hover:text-neutral-950"
+            className="text-[0.875rem] transition text-neutral-600 hover:text-neutral-950 xl:text-[0.95rem]"
           >
             Calculator
           </Link>
           <Link
             href="/msp-lead-generation"
-            className="text-[0.95rem] transition text-neutral-600 hover:text-neutral-950"
+            className="text-[0.875rem] transition text-neutral-600 hover:text-neutral-950 xl:text-[0.95rem]"
           >
             MSP Lead Gen
           </Link>
           <Link
             href="/pricing"
-            className="text-[0.95rem] transition text-neutral-600 hover:text-neutral-950"
+            className="text-[0.875rem] transition text-neutral-600 hover:text-neutral-950 xl:text-[0.95rem]"
           >
             Pricing
           </Link>
           <Link
             href="/blog"
-            className={`text-[0.95rem] transition ${
+            className={`text-[0.875rem] transition xl:text-[0.95rem] ${
               activePath === '/blog' || activePath.startsWith('/blog/')
                 ? 'font-medium text-neutral-950'
                 : 'text-neutral-600 hover:text-neutral-950'
@@ -126,9 +126,19 @@ export default function Header({ activePath = '/blog' }) {
           </Link>
           <Link
             href="/about"
-            className="text-[0.95rem] transition text-neutral-600 hover:text-neutral-950"
+            className="text-[0.875rem] transition text-neutral-600 hover:text-neutral-950 xl:text-[0.95rem]"
           >
             About
+          </Link>
+          <Link
+            href="/blog"
+            className={`text-[0.875rem] transition xl:text-[0.95rem] ${
+              activePath === '/blog' || activePath.startsWith('/blog/')
+                ? 'font-medium text-neutral-950'
+                : 'text-neutral-600 hover:text-neutral-950'
+            }`}
+          >
+            Blog
           </Link>
         </nav>
 
@@ -248,6 +258,12 @@ export default function Header({ activePath = '/blog' }) {
               className="rounded-lg px-3 py-2 text-base font-medium text-neutral-800 hover:bg-neutral-50"
             >
               About
+            </Link>
+            <Link
+              href="/blog"
+              className="rounded-lg px-3 py-2 text-base font-medium text-neutral-800 hover:bg-neutral-50"
+            >
+              Blog
             </Link>
           </nav>
         </div>

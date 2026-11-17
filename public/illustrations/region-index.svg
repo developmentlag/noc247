@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 300" width="640" height="300" role="img">
+  <title>Four region markers for the US, UK, Australia and Europe scenarios</title>
+  <rect width="640" height="300" rx="28" fill="#0B2545"/>
+  <text x="36" y="52" fill="#8DA9C4" font-family="Inter, Noto Sans, sans-serif" font-size="13" font-weight="600" letter-spacing="1.4">FOUR SCENARIOS</text>
+  <text x="36" y="88" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="26" font-weight="700">Same method, four regions</text>
+  <g font-family="Inter, Noto Sans, sans-serif" text-anchor="middle">
+    <rect x="36" y="130" width="130" height="150" rx="18" fill="#13315C"/>
+    <circle cx="101" cy="188" r="16" fill="none" stroke="#1F6FEB" stroke-width="3"/>
+    <text x="101" y="194" fill="#ffffff" font-size="13" font-weight="700">US</text>
+    <text x="101" y="246" fill="#B3C7E6" font-size="13">Texas</text>
+    <rect x="182" y="130" width="130" height="150" rx="18" fill="#13315C"/>
+    <circle cx="247" cy="188" r="16" fill="none" stroke="#1F6FEB" stroke-width="3"/>
+    <text x="247" y="194" fill="#ffffff" font-size="13" font-weight="700">UK</text>
+    <text x="247" y="246" fill="#B3C7E6" font-size="13">Out of hours</text>
+    <rect x="328" y="130" width="130" height="150" rx="18" fill="#13315C"/>
+    <circle cx="393" cy="188" r="16" fill="none" stroke="#1F6FEB" stroke-width="3"/>
+    <text x="393" y="194" fill="#ffffff" font-size="13" font-weight="700">AU</text>
+    <text x="393" y="246" fill="#B3C7E6" font-size="13">AEST / AWST</text>
+    <rect x="474" y="130" width="130" height="150" rx="18" fill="#13315C"/>
+    <circle cx="539" cy="188" r="16" fill="none" stroke="#1F6FEB" stroke-width="3"/>
+    <text x="539" y="194" fill="#ffffff" font-size="13" font-weight="700">EU</text>
+    <text x="539" y="246" fill="#B3C7E6" font-size="13">Three countries</text>
+  </g>
+</svg>

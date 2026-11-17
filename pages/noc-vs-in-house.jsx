@@ -38,7 +38,8 @@ export default function NocVsInHousePage() {
               In-house NOC or a white-label team?
             </h1>
             <p className="mt-6 text-lg leading-8 text-brand-600">
-              This page is the comparison. The outsourced NOC page introduces the offer; the numbers and the rota live here and on the calculator.
+              This page is the comparison. The outsourced NOC page introduces the offer; the numbers and the rota live here and on the calculator. Read{' '}
+              <Link href="/blog/how-to-choose-a-white-label-noc-partner" className="link-underline">how to choose a white-label NOC partner</Link>.
             </p>
           </div>
         </div>
