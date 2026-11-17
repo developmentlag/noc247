@@ -209,7 +209,19 @@ export async function getServerSideProps({ res }) {
         'public, s-maxage=300, stale-while-revalidate=59'
       );
     }
-    const blogs = await fetchAllBlogs();
+    const pillar = {
+      slug: 'how-to-choose-a-white-label-noc-partner',
+      title: 'How to Choose a White-Label NOC Partner: The 2026 MSP Evaluation Checklist',
+      description:
+        'An 8-point checklist for MSPs choosing a white-label NOC: coverage, tools, permissions, escalation, reporting, pricing, pilot, plus a handover template.',
+      datePublished: '2026-11-16',
+      dateModified: '2026-11-16',
+      dateFormatted: '16 November 2026',
+      readingTime: '12 min read',
+      tags: ['White-Label NOC', 'Buyer guide', 'Checklist'],
+      author: 'NOC247',
+    };
+    const blogs = [pillar, ...(await fetchAllBlogs()).filter((blog) => blog.slug !== pillar.slug)];
     return {
       props: {
         blogs,
@@ -219,7 +231,20 @@ export async function getServerSideProps({ res }) {
     console.error('[Blog Index] Error in getServerSideProps:', error);
     return {
       props: {
-        blogs: [],
+        blogs: [
+          {
+            slug: 'how-to-choose-a-white-label-noc-partner',
+            title: 'How to Choose a White-Label NOC Partner: The 2026 MSP Evaluation Checklist',
+            description:
+              'An 8-point checklist for MSPs choosing a white-label NOC: coverage, tools, permissions, escalation, reporting, pricing, pilot, plus a handover template.',
+            datePublished: '2026-11-16',
+            dateModified: '2026-11-16',
+            dateFormatted: '16 November 2026',
+            readingTime: '12 min read',
+            tags: ['White-Label NOC', 'Buyer guide', 'Checklist'],
+            author: 'NOC247',
+          },
+        ],
       },
     };
   }
