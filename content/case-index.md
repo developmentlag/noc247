@@ -46,12 +46,6 @@ Each page follows the same order, so you can compare them:
 - **What was specific to the region.** Time zones, holidays, regulation and on-call habits.
 - **The morning report and what changed.** What the day desk received, and what was different after go-live.
 
-## How to read the numbers
-
-The figures on these pages are the MSP's size, stack and hours. Published outcome figures, such as a change in time to acknowledge or in overnight calls, are walked through on a scoping call rather than printed here.
-
-If your stack and your gap look similar, the [free After-Hours Alert Audit](/free-alert-audit) will show how much of your own overnight alert volume needs a person.
-
 ## Related reading
 
 - [MSP backups fail overnight: how NOC247 handles it](/msp-backup-monitoring): the step-by-step flow from a failed backup alert to the morning report.

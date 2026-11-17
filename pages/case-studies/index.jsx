@@ -64,11 +64,7 @@ export default function CaseStudyIndex({ intro, rest }) {
       }}
     >
       <p className="present-lede">{intro}</p>
-      <PresentBody
-        markdown={rest}
-        midAfter="How to read the numbers"
-        midText="If your stack and your gap look similar, the free After-Hours Alert Audit will show how much of your own overnight alert volume needs a person."
-      />
+      <PresentBody markdown={rest} />
     </ArticleShell>
   );
 }
