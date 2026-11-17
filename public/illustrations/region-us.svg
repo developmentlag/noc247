@@ -6,5 +6,5 @@
   <circle cx="268" cy="214" r="9" fill="#1F6FEB"/>
   <circle cx="268" cy="214" r="18" fill="none" stroke="#1F6FEB" stroke-width="2"/>
   <text x="292" y="210" fill="#ffffff" font-family="Inter, Noto Sans, sans-serif" font-size="16" font-weight="700">Texas</text>
-  <text x="292" y="230" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13">Central time scenario</text>
+  <text x="292" y="230" fill="#B3C7E6" font-family="Inter, Noto Sans, sans-serif" font-size="13">Central time</text>
 </svg>

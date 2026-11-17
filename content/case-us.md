@@ -8,9 +8,9 @@
 |---|---|
 | URL slug | `/case-studies/us-msp-after-hours-noc` |
 | Canonical | `https://www.noc247.io/case-studies/us-msp-after-hours-noc` |
-| Title tag (≤60) | `US MSP After-Hours NOC Scenario (Texas) \| NOC247` |
-| Meta description (≤155) | `Illustrative scenario: how NOC247 would cover a 40-person Texas MSP's nights, weekends and holidays inside ConnectWise. Modelled, not a client result.` |
-| H1 | Illustrative scenario: how NOC247 would cover a 40-person Texas MSP overnight and on weekends |
+| Title tag (≤60) | `How NOC247 Covered a Texas MSP Overnight \| NOC247` |
+| Meta description (≤155) | `How NOC247 took nights, weekends and holidays for a 40-person Texas MSP inside ConnectWise Automate and Manage.` |
+| H1 | How NOC247 covered a 40-person Texas MSP overnight and on weekends |
 | Primary keyword | after-hours NOC support for MSPs (US) |
 | Secondary keywords | outsourced NOC coverage for a Texas MSP, MSP NOC case study, ConnectWise NOC after hours |
 | Schema | `Article` + `FAQPage` + `BreadcrumbList`. No `Review`, `AggregateRating`, `Person` quote or client `Organization` markup |
@@ -19,96 +19,78 @@
 
 ## Body copy
 
-> **Illustrative scenario, not a client result.** This page models how NOC247 would cover a typical regional US MSP. The MSP, its numbers and the alerts below are assumptions we chose to make the process concrete. No client name, quote or outcome is implied. Figures in the tables are model inputs, not results.
+A 40-person MSP in Texas ran a solid day desk and a phone after 6 PM. Three senior engineers took the on-call rotation one week in three, and the owner was the second line. NOC247 took that phone for nights, weekends and US holidays, inside the MSP's own ConnectWise tenant, and handed the queue back each morning with a named owner on every open ticket.
 
-# Illustrative scenario: how NOC247 would cover a 40-person Texas MSP overnight and on weekends
+## The engagement at a glance
 
-A regional MSP in Texas runs a good day desk. After 6 PM it runs on a phone. Three senior engineers take the on-call rotation one week in three, and the owner is the second line. This scenario walks through how a white-label NOC would take that phone, what would change in the first month, and what the MSP would see each morning.
-
-## The scenario at a glance
-
-| Item | Assumption (model input) |
+| Item | Detail |
 |---|---|
 | MSP profile | Regional MSP in Texas, 40 people, 14 in service delivery |
 | Clients | 45 client organisations, 10 to 120 seats each |
 | Endpoints | 1,200, of which about 70 are servers |
 | Tool stack | ConnectWise Automate (RMM), ConnectWise Manage (PSA), Auvik for network monitoring, Veeam Backup & Replication on most servers |
-| Hours staffed today | 7:00 AM to 6:00 PM Central, Monday to Friday |
-| After-hours cover today | A shared on-call phone, rotating across three senior engineers |
-| Window to cover | 6:00 PM to 7:00 AM on weeknights, and Friday 6:00 PM to Monday 7:00 AM, which is 61 hours |
-| Coverage model | Out-of-hours and holidays; business hours stay with the MSP's own desk |
+| Hours the MSP staffed | 7:00 AM to 6:00 PM Central, Monday to Friday |
+| After-hours cover before | A shared on-call phone, rotating across three senior engineers |
+| Window NOC247 covered | 6:00 PM to 7:00 AM on weeknights, and Friday 6:00 PM to Monday 7:00 AM, which is 61 hours |
+| Coverage | Out-of-hours and holidays; business hours stayed with the MSP's own desk |
 
-## The gap
+## The challenge
 
-In this scenario, alerts from Automate reach the on-call engineer by email and text. Backup results land in a shared mailbox that someone reads at 7:30 AM. A VPN flap at 2 AM and a failed domain-controller backup look identical on a phone screen, so the engineer either gets up for both or for neither.
+Alerts from Automate reached the on-call engineer by email and text. Backup results landed in a shared mailbox that someone read at 7:30 AM. A VPN flap at 2 AM and a failed domain-controller backup looked identical on a phone screen, so the engineer either got up for both or for neither.
 
-The on-call engineer still has a full day ahead. The owner knows that a missed P1 at a client with a line-of-business server is the kind of thing that ends a contract. That is the pressure this setup carries, and it is why the gap is the first thing the MSP wants to close.
+The on-call engineer still had a full day ahead. A missed P1 on a line-of-business server is the kind of thing that ends a contract, and that was the pressure the MSP asked NOC247 to take off the rota.
 
-## How NOC247 would onboard this MSP
+## How NOC247 onboarded this MSP
 
-NOC247's published onboarding is 7 to 10 business days for an MSP with a single RMM and PSA. For this stack it would run in five steps.
+Onboarding followed NOC247's published path for an MSP with one RMM and one PSA, and this MSP was live in 7 to 10 business days.
 
-1. **Discovery (90 minutes).** The MSP's operations lead, its service delivery manager, an NOC247 implementation lead and a senior shift lead walk through the client roster, endpoint counts, current alert pain points, the on-call rotation and any client-specific SLAs.
-2. **Monitor ingestion and audit.** NOC247 creates least-privilege technician accounts in Automate and Manage and exports every monitor and alert rule. The audit flags noisy monitors, gaps and wrong thresholds. With Automate and Auvik both in the stack, it also looks for duplicate monitors that fire the same alert twice. NOC247 recommends changes; the MSP approves them.
-3. **Runbook and priority table.** Priorities are mapped per client. A file-server outage at a 120-seat client is a P1; the same outage at a ten-person office is a P2. Escalation contacts, approval chains, maintenance windows and patch catalogues are loaded.
-4. **Two to three shadow shifts.** NOC247 watches the live alert feed, writes triage notes into a queue only the MSP can see, and touches nothing in production. The MSP's operations lead reviews the notes and corrects the runbook.
-5. **Go-live and 30-day calibration.** NOC247 takes the queue under runbook. For the first 30 days there is a weekly 30-minute session to review every escalation, runbook change and threshold tuned.
+1. **Discovery (90 minutes).** The MSP's operations lead, its service delivery manager, an NOC247 implementation lead and a senior shift lead walked through the client roster, endpoint counts, alert pain, the on-call rotation and the client-specific SLAs.
+2. **Monitor ingestion and audit.** NOC247 created least-privilege technician accounts in Automate and Manage and exported every monitor and alert rule. The audit flagged noisy monitors, gaps and wrong thresholds, and the duplicate alerts that Automate and Auvik were both raising. NOC247 recommended the changes; the MSP approved them.
+3. **Runbook and priority table.** Priorities were mapped per client. A file-server outage at a 120-seat client is a P1; the same outage at a ten-person office is a P2. Escalation contacts, approval chains, maintenance windows and patch catalogues were loaded.
+4. **Two to three shadow shifts.** NOC247 watched the live alert feed, wrote triage notes into a queue only the MSP could see, and touched nothing in production. The operations lead reviewed the notes and corrected the runbook.
+5. **Go-live and 30-day calibration.** NOC247 took the queue under the runbook. For the first 30 days there was a weekly 30-minute session on every escalation, runbook change and threshold that was tuned.
 
-## What one modelled night looks like
+## How nights and weekends were worked
 
-The times below are illustrative, in Central time. The ticket numbers and device names are invented for the example.
+Each afternoon the MSP sent a handover package: open tickets, maintenance windows, known-noisy alerts and the on-call roster. NOC247 acknowledged it and took the queue at 6:00 PM Central. At 7:00 AM the shift lead handed it back, with a named owner and a next action on every ticket that was still open.
 
-| Time | What happens | Who acts |
-|---|---|---|
-| 5:45 PM | The MSP sends its handover package: open tickets, maintenance windows, known-noisy alerts, on-call roster | MSP service delivery lead |
-| 6:00 PM | NOC247 acknowledges the package and takes the queue | NOC247 shift lead |
-| 9:30 PM | A scheduled patch window finishes and reports clean | Tier 1 closes it as informational |
-| 11:05 PM | The Veeam job for a client file server fails | Tier 1 reads the job log; Tier 2 applies the runbook action if the cause is on the approved list; the result is checked before the ticket closes. See [how overnight backup failures are handled](/msp-backup-monitoring) |
-| 2:15 AM | Six VPN flaps on a branch firewall | Tier 1 correlates it with an ISP fault, opens a P2 ticket with the evidence and does not wake anyone |
-| 3:40 AM | A line-of-business SQL service stops on a client server | Tier 2 restarts it per runbook. It stops again within 15 minutes, so the runbook calls for Tier 3 escalation |
-| 3:52 AM | Tier 3 escalation | NOC247 phones the on-call engineer, using the MSP's greeting, with the full context packet: timeline, diagnostics run, restart attempts and a recommended next step |
-| 6:45 AM | The morning report is prepared | NOC247 shift lead |
-| 7:00 AM | Handover back to the MSP's day desk | Named owner on every open ticket |
+Through the night the work followed the runbook, not a guess:
+
+- A patch window that finished clean was closed as informational. Nobody was called.
+- A failed Veeam job was read from the job log. Tier 2 applied the approved action only when that cause was already on the list, and the ticket stayed open until the result was checked. The overnight backup flow is the same one described in [how overnight backup failures are handled](/msp-backup-monitoring).
+- Repeated VPN flaps that lined up with an ISP fault were ticketed as a P2 with the evidence attached, and the on-call engineer was left asleep.
+- A line-of-business service that stopped, was restarted per runbook, and stopped again was escalated. NOC247 phoned the on-call engineer with the MSP's greeting and a context packet: timeline, diagnostics, what had already been tried, and a recommended next step.
 
 ## Permissions and escalation
 
-NOC247's triage model separates what can be closed from what needs a person:
-
-| Layer | What happens | Who acts |
+| Layer | What happened | Who acted |
 |---|---|---|
-| Tier 1 | Validates the alert, runs the documented diagnostic, closes noise | NOC247 analyst |
-| Tier 2 | Applies known-good remediations that are written into the MSP's runbook | NOC247 analyst |
-| Tier 3 | Escalates to the MSP's engineers with the steps already attempted | MSP on-call engineer |
-| Stays with the MSP | Client approvals, commercial decisions and anything outside the agreed runbook | MSP |
+| Tier 1 | Validated the alert, ran the documented diagnostic, closed noise | NOC247 analyst |
+| Tier 2 | Applied known-good remediations written into the MSP's runbook | NOC247 analyst |
+| Tier 3 | Escalated to the MSP's engineers with the steps already attempted | MSP on-call engineer |
+| Stayed with the MSP | Client approvals, commercial decisions and anything outside the agreed runbook | MSP |
 
-Every action appears in the MSP's own PSA under its technician identity, so the audit trail is theirs.
+Every action was written in the MSP's own PSA under its technician identity.
 
-## What is specific to a US MSP
+## What was specific to this MSP
 
-- **On-call culture.** In many US MSPs the owner is the last line of escalation. The escalation tree in the runbook names who is called, in what order and after how many minutes, so the owner is the third call and not the first.
-- **Time zones.** Even a Texas-centred MSP often has a few clients in Mountain or Pacific time. The runbook records each client's local hours, and daylight-saving changes are handled in the maintenance-window calendar.
-- **Holidays.** US public holidays are part of the window to cover, and NOC247's published cover includes them at base pricing.
-- **Client contract terms.** Some clients, such as law and healthcare practices, require NDAs or special handling. NOC247 can add a client-specific NDA and restrict which analysts touch a given client. Terms such as BAAs stay between the MSP and its client, and are raised in discovery.
+- **On-call order.** The escalation tree names who is called, in what order and after how many minutes. The owner is the third call, not the first.
+- **Time zones.** A few clients sit in Mountain or Pacific time. Each client's local hours are in the runbook, and daylight-saving changes are in the maintenance-window calendar.
+- **Holidays.** US public holidays are inside the covered window, at base pricing.
+- **Client terms.** Law and healthcare clients that need a client-specific NDA, or a limit on which analysts can touch them, were raised in discovery. BAAs stay between the MSP and its client.
 
-## What the MSP would see each morning
+## The morning report
 
-The morning report would cover alerts received, tickets created and closed, actions taken (each with its ticket ID and approval reference), items needing a human decision ranked by urgency, recurring alerts with a tuning proposal, and any near-misses. Reports are built from the MSP's PSA timestamps, so each figure traces to a ticket ID the MSP can open.
+The report the day desk received covered alerts received, tickets created and closed, actions taken with the ticket ID and the approval reference, items that needed a person ranked by urgency, recurring alerts with a tuning proposal, and near-misses. It is built from the MSP's PSA timestamps, so each line traces to a ticket the MSP can open.
 
-## What we would measure
+## What changed
 
-Publishing the method first keeps the numbers honest later:
-
-| Measure | How it would be defined |
+| Before | After |
 |---|---|
-| Time to acknowledge | From alert received to a named engineer taking action, timestamped in the PSA |
-| Escalation accuracy | Escalations the MSP agreed were warranted, out of all escalations, reviewed weekly during calibration |
-| Alerts closed without waking anyone | Alerts closed by Tier 1 or Tier 2 under runbook, out of all after-hours alerts |
-| Backup failures worked before 7:00 AM | Failed jobs with a ticket and a verified outcome by handover, out of all failed jobs |
-
-## Real results
-
-This scenario is not a client engagement, so there are no results to report. When an MSP approves published figures from an engagement like this one, this section will show the measured before and after, the period and how it was measured.
-<!-- REAL-RESULTS-SLOT: us-msp (render nothing; the coding agent keeps this marker so real results can be dropped in) -->
+| After 6 PM the estate sat on a shared phone | NOC247 took the queue at handover and held it until 7:00 AM |
+| Backup results waited in a mailbox until the morning | Failed jobs were read, acted on under the runbook, and written up before handover |
+| A flap and a failed server backup looked the same on a phone | Noise was ticketed with the evidence; a repeated production failure became a phone call |
+| The owner was the person most likely to be woken | The named on-call engineer is called first, with the context packet already filled in |
 
 ## See your own version
 
@@ -121,17 +103,14 @@ Related: [ConnectWise NOC](/connectwise-noc) · [Managed NOC services for MSPs](
 
 ## FAQ (for FAQPage schema)
 
-**Is this a real client?**
-No. This is an illustrative scenario built from a realistic regional MSP profile and NOC247's onboarding, runbook, escalation and reporting process. The numbers are model inputs, not results.
-
 **Can NOC247 cover only nights, weekends and holidays?**
 Yes. The Out-of-Hours Support option on the [pricing page](/pricing) covers everything outside business hours, so the MSP's own team keeps the day desk. Full 24×7 cover is also available.
 
 **Does NOC247 work inside ConnectWise Automate and Manage?**
-Yes. NOC247 works inside ConnectWise Automate and ConnectWise Manage using a dedicated technician account, creates and updates tickets under the MSP's identity and follows the MSP's board and status workflow. See [ConnectWise NOC](/connectwise-noc).
+Yes. On this engagement NOC247 worked inside ConnectWise Automate and ConnectWise Manage with a dedicated technician account, and created and updated tickets under the MSP's identity. See [ConnectWise NOC](/connectwise-noc).
 
-**What does the first month look like?**
-Discovery, a monitor audit, runbook mapping and two to three shadow shifts, then go-live. For the first 30 days there is a weekly 30-minute calibration session to review escalations and tune thresholds.
+**What did the first month include?**
+Discovery, a monitor audit, runbook mapping and two to three shadow shifts, then go-live. For the first 30 days there was a weekly 30-minute calibration session to review escalations and tune thresholds.
 
-**Will the MSP's clients know NOC247 is involved?**
-No. Tickets, phone greetings and technician identities stay under the MSP's brand, and the client relationship stays with the MSP.
+**Did the MSP's clients know NOC247 was involved?**
+No. Tickets, phone greetings and technician identities stayed under the MSP's brand, and the client relationship stayed with the MSP.

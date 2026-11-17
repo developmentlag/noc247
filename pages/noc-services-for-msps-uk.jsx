@@ -60,7 +60,7 @@ export default function UkNocPage() {
             <h2>Who it is for</h2>
             <p>
               MSPs with UK end customers, or a UK overnight window, who want monitoring and triage without standing up a local night shift. It is not a staffing advert and not a website-design offer. See the{' '}
-              <Link href="/case-studies/uk-msp-out-of-hours-noc" className="link-underline">UK MSP out-of-hours scenario</Link>.
+              <Link href="/case-studies/uk-msp-out-of-hours-noc" className="link-underline">UK MSP out-of-hours case study</Link>.
             </p>
             <h2>How white-label works under a UK brand</h2>
             <p>

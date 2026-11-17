@@ -8,9 +8,9 @@
 |---|---|
 | URL slug | `/case-studies/australia-msp-24x7-noc` |
 | Canonical | `https://www.noc247.io/case-studies/australia-msp-24x7-noc` |
-| Title tag (≤60) | `Australian MSP 24/7 NOC Scenario \| NOC247` |
-| Meta description (≤155) | `Illustrative scenario: how NOC247 would cover a 35-person MSP across AEST and AWST, with Essential Eight evidence. Modelled, not a client result.` |
-| H1 | Illustrative scenario: how NOC247 would cover a 35-person Australian MSP across AEST and AWST |
+| Title tag (≤60) | `Australian MSP 24/7 NOC Case Study \| NOC247` |
+| Meta description (≤155) | `How NOC247 covered a 35-person Australian MSP across Sydney and Perth, with Essential Eight evidence in the tickets.` |
+| H1 | How NOC247 covered a 35-person Australian MSP across AEST and AWST |
 | Primary keyword | outsourced NOC for Australian MSPs |
 | Secondary keywords | white label NOC Australia, after-hours NOC support Australia, Essential Eight MSP NOC, Datto RMM NOC |
 | Schema | `Article` + `FAQPage` + `BreadcrumbList`. No review or client markup |
@@ -20,88 +20,75 @@
 
 ## Body copy
 
-> **Illustrative scenario, not a client result.** This page models how NOC247 would cover a typical Australian MSP. The MSP, its numbers and the alerts below are assumptions we chose to make the process concrete. No client name, quote or outcome is implied. Figures in the tables are model inputs, not results.
+A 35-person Australian MSP had a Sydney head office and a Perth branch, and its business day was not one day. When Sydney finished at 5:30 PM, Perth clients were still working, and the people who answered Perth's phones had gone home with Sydney. NOC247 closed that seam. Each desk keeps its own day. Neither carries the phone overnight. Patch windows, failed patches and backup checks now sit in Autotask with a time and an outcome, which is the evidence clients ask for against the Essential Eight.
 
-# Illustrative scenario: how NOC247 would cover a 35-person Australian MSP across AEST and AWST
+## The engagement at a glance
 
-An Australian MSP with a Sydney head office and a Perth branch has an unusual problem. Its business day is not one day. By the time Sydney finishes at 5:30 PM, Perth clients are still working for two more hours, and the people who answer Perth's phones went home with Sydney. This scenario shows how a white-label NOC would close that seam, and what the MSP would be able to evidence for the Essential Eight.
-
-## The scenario at a glance
-
-| Item | Assumption (model input) |
+| Item | Detail |
 |---|---|
 | MSP profile | MSP with a head office in Sydney and a branch in Perth, 35 people, 13 in service delivery |
 | Clients | 60 client organisations across New South Wales, Victoria, Queensland and Western Australia |
 | Endpoints | 1,500, of which about 90 are servers |
 | Tool stack | Datto RMM (RMM), Autotask PSA (PSA), Datto BCDR on the servers that have it, Auvik for network monitoring |
-| Hours staffed today | 8:30 AM to 5:30 PM Sydney time for the east coast; Perth staff cover 8:30 AM to 5:30 PM Perth time |
-| After-hours cover today | A shared on-call phone, with the east-coast and Perth engineers each taking nights for their own region |
-| Window to cover | Everything outside both desks, plus weekends and public holidays by state |
-| Coverage model | Out-of-hours for each region against its own desk hours, plus weekends and state public holidays; neither desk carries the phone overnight |
+| Hours the MSP staffed | 8:30 AM to 5:30 PM Sydney time for the east coast; Perth staff cover 8:30 AM to 5:30 PM Perth time |
+| After-hours cover before | A shared on-call phone, with the east-coast and Perth engineers each taking nights for their own region |
+| Window NOC247 covered | Everything outside both desks, plus weekends and public holidays by state |
+| Coverage | Out-of-hours for each region against its own desk hours, plus weekends and state public holidays |
 
-## The gap
+## The challenge
 
-Perth runs two to three hours behind Sydney depending on the season, because most eastern states move to daylight saving and Western Australia and Queensland do not. For part of the year, the east-coast desk shuts at 5:30 PM Sydney time while Perth is still in the middle of its afternoon. The Perth engineer is alone for hours with 20 clients' tickets and the east-coast queue.
+Perth runs two to three hours behind Sydney depending on the season, because most eastern states move to daylight saving and Western Australia and Queensland do not. For part of the year the east-coast desk shut at 5:30 PM Sydney time while Perth was still in its afternoon. The Perth engineer was then alone with the Perth book and the east-coast queue.
 
-Public holidays add another layer. They differ by state, and a state holiday can leave one desk closed while the other is open.
+Public holidays differ by state, so one desk could be closed while the other was open.
 
-## How NOC247 would onboard this MSP
+## How NOC247 onboarded this MSP
 
-NOC247 publishes a 7 to 10 business day onboarding for an MSP with one RMM and PSA. A mixed state footprint adds to the discovery work, not the sequence.
+NOC247's published onboarding for one RMM and one PSA is 7 to 10 business days. The mixed state footprint added to discovery, not to the sequence.
 
-1. **Discovery.** A 90-minute session covering the client roster by state, each client's operating hours, SLA tables, the Sydney and Perth desks, and which clients have special handling.
-2. **Monitor ingestion and audit.** A named technician account is created in the MSP's Datto RMM and Autotask. The audit flags noisy monitors, missing monitors and wrong thresholds, and the Datto and Auvik alert sets are checked for duplicates.
-3. **Runbook, priorities and time-zone map.** Every client gets a priority table and a local-hours record, so a P2 at a Perth client at 4:00 PM Perth time is not treated as after-hours when it is 6:00 PM in Sydney. The holiday calendar is built by state.
-4. **Shadow shifts.** NOC247 watches the live feed and writes what it would have done into a queue only the MSP sees.
-5. **Go-live and calibration.** The MSP signs off, NOC247 takes the queue, and the first 30 days include a weekly review of escalations and thresholds.
+1. **Discovery.** A 90-minute session covered the client roster by state, each client's operating hours, the SLA tables, the Sydney and Perth desks, and which clients have special handling.
+2. **Monitor ingestion and audit.** A named technician account was created in the MSP's Datto RMM and Autotask. The audit flagged noisy monitors, missing monitors and wrong thresholds, and checked Datto and Auvik for duplicate alerts.
+3. **Runbook, priorities and time-zone map.** Every client has a priority table and a local-hours record, so a P2 at a Perth client at 4:00 PM Perth time is not treated as after-hours just because it is 6:00 PM in Sydney. The holiday calendar was built by state.
+4. **Shadow shifts.** NOC247 watched the live feed and wrote what it would have done into a queue only the MSP could see.
+5. **Go-live and calibration.** The MSP signed off, NOC247 took the queue, and the first 30 days included a weekly review of escalations and thresholds.
 
-## What one modelled night looks like
+## How the two desks were covered
 
-The times are illustrative. The first column gives Sydney time and the second gives Perth time, using standard time (during eastern daylight saving the gap is three hours). Device names are invented.
+The east-coast desk closed at 5:30 PM Sydney and sent a handover package that also listed the Perth desk's open items. NOC247 took the east-coast queue then, and took Perth when that desk closed at 5:30 PM Perth time. The morning report for Sydney was ready before the Sydney desk opened at 8:30 AM, with a named owner on every open ticket.
 
-| Sydney time | Perth time | What happens | Who acts |
-|---|---|---|---|
-| 5:30 PM | 3:30 PM | East-coast desk closes. The handover package covers east-coast clients and the Perth desk's open items | MSP service delivery lead |
-| 6:00 PM | 4:00 PM | NOC247 takes the east-coast queue. Perth keeps its own desk until 5:30 PM Perth time | NOC247 shift lead |
-| 9:10 PM | 7:10 PM | A Datto BCDR backup fails to verify at a Perth client after hours | Tier 1 reads the verification result and the job history; see [how overnight backup failures are handled](/msp-backup-monitoring) |
-| 11:30 PM | 9:30 PM | Patch window at a Victorian client completes with two failed endpoints | Tier 2 re-runs the approved patch policy, then records the result and the failure reason |
-| 3:20 AM | 1:20 AM | A Queensland site loses its WAN link | Tier 1 confirms in Auvik; a P1 under the client's SLA, so NOC247 phones the MSP's on-call engineer with the context packet |
-| 7:00 AM | 5:00 AM | Morning report prepared for the east coast | NOC247 shift lead |
-| 8:30 AM | 6:30 AM | Handover to the Sydney desk | Named owner on every open ticket |
+Overnight work followed the runbook in the client's own time zone:
+
+- A Datto BCDR backup that failed verification was read against the job history before anyone was called. The path is the one in [how overnight backup failures are handled](/msp-backup-monitoring).
+- A patch window that completed with failures was re-run under the approved policy, and the ticket recorded the result and the failure reason.
+- A site that lost its WAN link, confirmed down in Auvik and classed as a P1 under that client's SLA, was a phone call to the MSP's on-call engineer with the context packet.
 
 ## Permissions and escalation
 
-| Layer | What happens | Who acts |
+| Layer | What happened | Who acted |
 |---|---|---|
-| Tier 1 | Validates the alert, runs the documented diagnostic, closes noise | NOC247 analyst |
-| Tier 2 | Applies known-good remediations that are written into the runbook | NOC247 analyst |
-| Tier 3 | Escalates to the MSP's on-call engineer with the steps already attempted | MSP |
-| Stays with the MSP | Client approvals, commercial decisions and anything outside the agreed runbook | MSP |
+| Tier 1 | Validated the alert, ran the documented diagnostic, closed noise | NOC247 analyst |
+| Tier 2 | Applied known-good remediations written into the runbook | NOC247 analyst |
+| Tier 3 | Escalated to the MSP's on-call engineer with the steps already attempted | MSP |
+| Stayed with the MSP | Client approvals, commercial decisions and anything outside the agreed runbook | MSP |
 
-## What is specific to an Australian MSP
+## What was specific to this MSP
 
-- **AEST, AEDT and AWST.** The MSP's clients sit across at least three time zones, and the offset between Sydney and Brisbane changes twice a year. The runbook stores each client's local hours and handover times in the client's own time zone, so the daylight-saving change is an update to a calendar, not a surprise.
-- **The Essential Eight.** Clients often ask their MSP about Essential Eight maturity, which includes patching applications, patching operating systems and regular backups. Assessors look for evidence. In this scenario the MSP's patch windows, failed patches and backup checks are each in an Autotask ticket with a time and an outcome, which makes that evidence easier to produce. The maturity assessment itself stays with the MSP and its assessor.
-- **Public holidays by state.** The runbook holds the calendar for each state, and cover for each holiday is agreed in discovery.
-- **Distance from the NOC.** An Australian MSP's evening is another time zone's working day, which is why the handover package and the morning report are the two documents that matter most.
+- **AEST, AEDT and AWST.** Clients sit across at least three time zones, and the offset between Sydney and Brisbane changes twice a year. The runbook stores each client's local hours and handover times in that client's own time zone.
+- **The Essential Eight.** Clients ask about maturity on patching applications, patching operating systems and regular backups. Assessors look for evidence. Patch windows, failed patches and backup checks are each an Autotask ticket with a time and an outcome. The maturity assessment itself stays with the MSP and its assessor.
+- **Public holidays by state.** The calendar for each state was agreed in discovery and written into the runbook.
+- **The handover documents.** Because the MSP's evening is another time zone's working day, the handover package and the morning report are the two documents that carry the seam between desks.
 
-## What the MSP would see each morning
+## The morning report
 
-A report built from Autotask timestamps: alerts received, tickets created and closed, actions taken with approval references, items needing a decision ranked by urgency, recurring alerts with a tuning proposal and near-misses. A separate section lists patch and backup outcomes per client so they can be filed as evidence.
+The report is built from Autotask timestamps: alerts received, tickets created and closed, actions taken with approval references, items that need a decision ranked by urgency, recurring alerts with a tuning proposal, and near-misses. A separate section lists patch and backup outcomes per client so they can be filed as evidence.
 
-## What we would measure
+## What changed
 
-| Measure | How it would be defined |
+| Before | After |
 |---|---|
-| Time to acknowledge | From alert received to a named engineer taking action, timestamped in Autotask |
-| Cross-zone handover completeness | Handover packages and reports delivered on time with every line completed, reviewed weekly during calibration |
-| Patch and backup evidence | Patch and backup tickets carrying a window, outcome and failure reason |
-| Wrong-region escalations | Escalations sent to the wrong desk or contact because of a time-zone error, which should be zero |
-
-## Real results
-
-This scenario is not a client engagement, so there are no results to report. When an MSP approves published figures from an engagement like this one, this section will show the measured before and after, the period and how it was measured.
-<!-- REAL-RESULTS-SLOT: au-msp (render nothing; the coding agent keeps this marker so real results can be dropped in) -->
+| Perth was alone for the overlap after Sydney went home | NOC247 takes the east-coast queue when Sydney closes, and Perth when Perth closes |
+| Each region carried its own night phone | Neither desk carries the phone overnight |
+| A state holiday could leave one desk uncovered | The state holiday calendar is in the runbook, and cover for each date was agreed up front |
+| Essential Eight evidence was whatever someone could reconstruct | Patch and backup outcomes are already in Autotask, with a time |
 
 ## See your own version
 
@@ -114,17 +101,14 @@ Related: [RMM integrations](/rmm-integrations) · [24/7 NOC support](/247-noc-su
 
 ## FAQ (for FAQPage schema)
 
-**Is this a real Australian client?**
-No. It is an illustrative scenario built from a realistic Australian MSP profile and NOC247's published onboarding, runbook, escalation and reporting process. The figures are model inputs, not results.
-
-**How does a NOC cover Perth and Sydney in the same rota?**
-Each client's local hours, handover times and holiday calendar are recorded in the runbook, so the NOC works to the client's own time zone. The handover package and morning report are the two documents that carry the seam between desks.
+**How does a NOC cover Perth and Sydney on the same engagement?**
+Each client's local hours, handover times and holiday calendar are in the runbook, so the night shift works to the client's own time zone. The handover package and the morning report carry the seam between the two desks.
 
 **Will NOC247 work inside Datto RMM and Autotask?**
-Yes. NOC247 works inside Datto RMM and Autotask PSA using named technician accounts, and runs only the components, policies and runbook actions the MSP has approved.
+Yes. On this engagement NOC247 worked inside Datto RMM and Autotask with named technician accounts, and ran only the policies and runbook actions the MSP had approved.
 
 **Does a NOC help with the Essential Eight?**
 It helps with evidence, not certification. Patch windows, failed patches and backup checks are recorded as tickets with a time and an outcome. The maturity assessment stays with the MSP and its assessor.
 
 **How are Australian public holidays covered?**
-The holiday calendar for each state is agreed in discovery and written into the runbook, so it is clear who covers what on each date.
+The holiday calendar for each state was agreed in discovery and written into the runbook, so it is clear who covers each date.

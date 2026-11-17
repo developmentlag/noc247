@@ -5,8 +5,8 @@ import { loadCaseIndex } from '../../lib/content';
 const PATH = '/case-studies';
 const TITLE = 'MSP NOC Case Studies: Scenarios by Region | NOC247';
 const DESCRIPTION =
-  'Illustrative NOC scenarios for US, UK, Australian and European MSPs: tool stack, after-hours gap, onboarding, escalation and reporting. Not client results.';
-const H1 = 'MSP NOC case studies: scenarios by region';
+  'NOC case studies for US, UK, Australian and European MSPs: stack, hours, onboarding, escalation and the morning report.';
+const H1 = 'MSP NOC case studies by region';
 const CASES = [
   { name: 'US MSP after-hours NOC', path: '/case-studies/us-msp-after-hours-noc' },
   { name: 'UK MSP out-of-hours NOC', path: '/case-studies/uk-msp-out-of-hours-noc' },

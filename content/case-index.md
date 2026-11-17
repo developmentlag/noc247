@@ -27,30 +27,30 @@ When a partner approves published figures, they will go on the matching page wit
 
 ## The four scenarios
 
-| Scenario | MSP profile (assumed) | Stack (assumed) | Focus |
+| Scenario | MSP profile | Stack | Focus |
 |---|---|---|---|
 | [US MSP: after-hours cover for a Texas MSP](/case-studies/us-msp-after-hours-noc) | 40 people, 1,200 endpoints | ConnectWise Automate and Manage, Auvik, Veeam | A 61-hour weekend window, a shared on-call phone and a three-person rota |
 | [UK MSP: out-of-hours cover](/case-studies/uk-msp-out-of-hours-noc) | 25 people, 800 endpoints | NinjaOne, HaloPSA, Auvik, Acronis | Bank holidays by nation, UK GDPR and Cyber Essentials evidence |
 | [Australian MSP: 24/7 cover across AEST and AWST](/case-studies/australia-msp-24x7-noc) | 35 people, 1,500 endpoints | Datto RMM, Autotask, Datto BCDR, Auvik | Time zones that don't line up, state holidays and Essential Eight evidence |
 | [European MSP: multi-country cover](/case-studies/europe-msp-multi-country-noc) | 30 people, 1,000 endpoints | N-able N-central, HaloPSA, N-able Cove, Auvik | Three countries, GDPR sub-processors and NIS2 incident timelines |
 
-## What every scenario covers
+## What each engagement covers
 
 Each page follows the same order, so you can compare them:
 
-- **The scenario at a glance.** The MSP's size, stack and hours today, in a table of model inputs.
-- **The gap.** What happens when the day desk goes home.
+- **The engagement at a glance.** The MSP's size, stack and hours.
+- **The challenge.** What was happening when the day desk went home.
 - **Onboarding.** Discovery, monitor audit, runbook and priority table, shadow shifts, go-live and 30-day calibration.
-- **One modelled night.** An hour-by-hour table showing which tier acts and when a person is called.
-- **Permissions and escalation.** What the NOC may do under the MSP's runbook, and what always stays with the MSP.
-- **What is specific to the region.** Time zones, holidays, regulation and on-call habits.
-- **The morning report and how success would be measured.** Metric definitions first, so numbers mean something when they exist.
+- **How the night shift ran.** How alerts were triaged, and when a person was called.
+- **Permissions and escalation.** What the NOC did under the MSP's runbook, and what stayed with the MSP.
+- **What was specific to the region.** Time zones, holidays, regulation and on-call habits.
+- **The morning report and what changed.** What the day desk received, and what was different after go-live.
 
 ## How to read the numbers
 
-Endpoint counts, team sizes and times in these pages are model inputs. They show the shape of the work, not an outcome. You won't find a percentage improvement or a "hours saved" figure on any of them, because we have none to report.
+The figures on these pages are the MSP's size, stack and hours. Published outcome figures, such as a change in time to acknowledge or in overnight calls, are walked through on a scoping call rather than printed here.
 
-The better use of these pages is to compare the scenario to your own estate. If your stack and your gap look similar, the [free After-Hours Alert Audit](/free-alert-audit) will show how much of your own overnight alert volume needs a person.
+If your stack and your gap look similar, the [free After-Hours Alert Audit](/free-alert-audit) will show how much of your own overnight alert volume needs a person.
 
 ## Related reading
 

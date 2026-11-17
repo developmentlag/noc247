@@ -41,3 +41,10 @@
   .content-table--stack tr{border:1px solid #D9E3F4;border-radius:1rem;margin:0 0 1rem;padding:.4rem .8rem .8rem;background:#fff}
   .content-table--stack td{border:0;padding:.45rem 0}
 }
+
+nav[aria-label="Primary"]{gap:.55rem!important}
+nav[aria-label="Primary"] a,nav[aria-label="Primary"] button{white-space:nowrap!important;font-size:.8125rem!important}
+@media(min-width:1280px){
+  nav[aria-label="Primary"]{gap:1.25rem!important}
+  nav[aria-label="Primary"] a,nav[aria-label="Primary"] button{font-size:.95rem!important}
+}

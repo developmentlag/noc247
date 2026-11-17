@@ -117,7 +117,6 @@ function GlanceGrid({ rows }) {
         const figure = leadNumber(label, value);
         return (
           <article className="glance-card" key={label}>
-            <p className="kicker">Model input</p>
             {figure ? <p className="figure">{figure}</p> : null}
             <p><strong>{label}.</strong> {row[1]}</p>
           </article>

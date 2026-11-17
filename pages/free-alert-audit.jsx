@@ -87,7 +87,7 @@ export default function FreeAlertAuditPage() {
                 <Link href="/auvik-noc" className="link-underline">Auvik</Link>,{' '}
                 <Link href="/blog/reduce-rmm-alert-noise" className="link-underline">cutting RMM alert noise</Link>.{' '}
                 See <Link href="/msp-backup-monitoring" className="link-underline">how overnight backup failures are handled</Link> and the{' '}
-                <Link href="/case-studies" className="link-underline">scenario case studies</Link>.
+                <Link href="/case-studies" className="link-underline">case studies</Link>.
               </p>
             </article>
             <article>

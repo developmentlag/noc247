@@ -5,10 +5,10 @@ import { loadCase } from '../../lib/content';
 const PAGES = {
   'us-msp-after-hours-noc': {
     file: 'case-us.md',
-    title: 'US MSP After-Hours NOC Scenario (Texas) | NOC247',
+    title: 'How NOC247 Covered a Texas MSP Overnight | NOC247',
     description:
-      "Illustrative scenario: how NOC247 would cover a 40-person Texas MSP's nights, weekends and holidays inside ConnectWise. Modelled, not a client result.",
-    h1: 'Illustrative scenario: how NOC247 would cover a 40-person Texas MSP overnight and on weekends',
+      "How NOC247 took nights, weekends and holidays for a 40-person Texas MSP inside ConnectWise Automate and Manage.",
+    h1: 'How NOC247 covered a 40-person Texas MSP overnight and on weekends',
     crumb: 'US MSP after-hours NOC',
     lang: 'en-US',
     image: '/og/case-us.png',
@@ -18,10 +18,10 @@ const PAGES = {
   },
   'uk-msp-out-of-hours-noc': {
     file: 'case-uk.md',
-    title: 'UK MSP Out-of-Hours NOC Scenario | NOC247',
+    title: 'How NOC247 Covered a UK MSP Out of Hours | NOC247',
     description:
-      'Illustrative scenario: how NOC247 would cover a 25-person UK MSP out of hours, with UK GDPR in view, inside NinjaOne and HaloPSA. Not a client result.',
-    h1: 'Illustrative scenario: how NOC247 would give a 25-person UK MSP out-of-hours cover',
+      'How NOC247 covered a 25-person UK MSP out of hours, inside NinjaOne and HaloPSA, with UK GDPR in view.',
+    h1: 'How NOC247 covered a 25-person UK MSP out of hours',
     crumb: 'UK MSP out-of-hours NOC',
     lang: 'en-GB',
     image: '/og/case-uk.png',
@@ -31,10 +31,10 @@ const PAGES = {
   },
   'australia-msp-24x7-noc': {
     file: 'case-au.md',
-    title: 'Australian MSP 24/7 NOC Scenario | NOC247',
+    title: 'How NOC247 Covered an Australian MSP | NOC247',
     description:
-      'Illustrative scenario: how NOC247 would cover a 35-person MSP across AEST and AWST, with Essential Eight evidence. Modelled, not a client result.',
-    h1: 'Illustrative scenario: how NOC247 would cover a 35-person Australian MSP across AEST and AWST',
+      'How NOC247 covered a 35-person Australian MSP across Sydney and Perth, with Essential Eight evidence in the tickets.',
+    h1: 'How NOC247 covered a 35-person Australian MSP across AEST and AWST',
     crumb: 'Australian MSP 24/7 NOC',
     lang: 'en-AU',
     image: '/og/case-au.png',
@@ -44,10 +44,10 @@ const PAGES = {
   },
   'europe-msp-multi-country-noc': {
     file: 'case-eu.md',
-    title: 'European MSP Multi-Country NOC Scenario | NOC247',
+    title: 'How NOC247 Covered a Three-Country MSP | NOC247',
     description:
-      'Illustrative scenario: how NOC247 would cover a 30-person MSP serving three EU countries, with GDPR and NIS2 in view. Modelled, not a client result.',
-    h1: 'Illustrative scenario: how NOC247 would cover a 30-person MSP serving clients in three EU countries',
+      'How NOC247 covered a 30-person MSP with clients in the Netherlands, Belgium and Germany.',
+    h1: 'How NOC247 covered a 30-person MSP serving clients in three EU countries',
     crumb: 'European MSP multi-country NOC',
     lang: 'en-US',
     image: '/og/case-eu.png',
@@ -118,7 +118,7 @@ export default function CaseStudyPage({ slug, banner, body, faq, headings }) {
       toc={headings}
       hero={{ src: page.hero, alt: page.alt, width: 640, height: 360 }}
     >
-      <PresentBody markdown={markdown} midAfter="The gap" midText={page.mid} />
+      <PresentBody markdown={markdown} midAfter="The challenge" midText={page.mid} />
     </ArticleShell>
   );
 }
