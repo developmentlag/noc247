@@ -12,8 +12,8 @@ const PAGES = {
     crumb: 'US MSP after-hours NOC',
     lang: 'en-US',
     image: '/og/case-us.png',
-    hero: '/illustrations/region-us.svg',
-    alt: 'Stylised map of the United States with Texas marked.',
+    hero: '/illustrations/region-us.webp',
+    alt: 'Night map of Texas with city lights at Dallas, Houston and Austin.',
     mid: 'The quickest way to see how much of your overnight noise needs a person is to send us a week of it.',
   },
   'uk-msp-out-of-hours-noc': {
@@ -25,8 +25,8 @@ const PAGES = {
     crumb: 'UK MSP out-of-hours NOC',
     lang: 'en-GB',
     image: '/og/case-uk.png',
-    hero: '/illustrations/region-uk.svg',
-    alt: 'Stylised map of the United Kingdom.',
+    hero: '/illustrations/region-uk.webp',
+    alt: 'Night map of the United Kingdom with city lights at London, Manchester and Edinburgh.',
     mid: 'Send one week of your out-of-hours alerts and see which pages needed a person.',
   },
   'australia-msp-24x7-noc': {
@@ -38,8 +38,8 @@ const PAGES = {
     crumb: 'Australian MSP 24/7 NOC',
     lang: 'en-AU',
     image: '/og/case-au.png',
-    hero: '/illustrations/region-au.svg',
-    alt: 'Stylised map of Australia with Sydney and Perth marked.',
+    hero: '/illustrations/region-au.webp',
+    alt: 'Night map of Australia with city lights at Sydney and Perth.',
     mid: 'Send one week of your after-hours alerts and see which pages needed a person.',
   },
   'europe-msp-multi-country-noc': {
@@ -51,8 +51,8 @@ const PAGES = {
     crumb: 'European MSP multi-country NOC',
     lang: 'en-US',
     image: '/og/case-eu.png',
-    hero: '/illustrations/region-eu.svg',
-    alt: 'Stylised map marking the Netherlands, Belgium and Germany.',
+    hero: '/illustrations/region-eu.webp',
+    alt: 'Night map of the Netherlands, Belgium and western Germany with city lights at Amsterdam, Brussels and Frankfurt.',
     mid: 'Send one week of your after-hours alerts and see which pages needed a person.',
   },
 };
@@ -116,7 +116,7 @@ export default function CaseStudyPage({ slug, banner, body, faq, headings }) {
       h1={page.h1}
       banner={banner}
       toc={headings}
-      hero={{ src: page.hero, alt: page.alt, width: 640, height: 360 }}
+      hero={{ src: page.hero, alt: page.alt, width: 1600, height: 900 }}
     >
       <PresentBody markdown={markdown} midAfter="The challenge" midText={page.mid} />
     </ArticleShell>

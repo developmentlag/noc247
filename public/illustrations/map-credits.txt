@@ -1,0 +1,16 @@
+Case-study night maps
+
+Coastlines and country borders are Natural Earth 1:50m
+(ne_50m_land and ne_50m_admin_0_countries).
+Source: https://www.naturalearthdata.com/
+License: public domain. https://www.naturalearthdata.com/about/terms-of-use/
+
+City positions are the geographic coordinates of Dallas, Houston, Austin,
+London, Manchester, Edinburgh, Sydney, Perth, Amsterdam, Brussels and
+Frankfurt, plus a few dimmer nearby cities for context.
+
+The navy tint, graticule and city-light glow are an original rendering
+for NOC247. No NASA imagery is included.
+
+Regenerate with: node scripts/render-region-maps.mjs
+(expects the two GeoJSON files in /tmp/ne, or NE_DIR).
